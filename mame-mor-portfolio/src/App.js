@@ -53,7 +53,7 @@ function App() {
         <video src={'https://github.com/Mame-Mor-M/Mbong-Art-Portfolio/releases/download/Animation/Flux_Intro.mp4'} muted autoPlay playsInline preload='auto' controls={false}></video>
       </div>
       <header className="Section-Header" id="Animations">
-        Animation Gallery
+        Games
         <p className='Section-Desc'></p>
       </header>
       <div className="Animations">
@@ -73,7 +73,7 @@ function App() {
         <video controls={true} src={'https://github.com/Mame-Mor-M/Mbong-Art-Portfolio/releases/download/Animation/Demo_Reel.mp4'}></video>
       </div>
       <header className="Section-Header" id="Illustrations">
-        Illustrations
+        Other Projects
         <p className='Section-Desc'>Character sheets & portraits</p>
       </header>
       <div className="Illustrations">
@@ -130,13 +130,13 @@ const Navbar = () => {
     <nav className={`Navbar ${visible ? 'visible' : 'hidden'}`}>
       <div className="Navbar-Left">
         {/*<button onClick={() => scrollToSection('About')}>About Me</button>*/}
-        <button onClick={() => scrollToSection('Illustrations')}>Illustrations</button>
-        <button onClick={() => scrollToSection('Animations')}>Animations</button>
+        <button onClick={() => scrollToSection('Animations')}>Games</button>
+        <button onClick={() => scrollToSection('Illustrations')}>Other Projects</button>
       </div>
 
       <div className="Navbar-Center" onClick={() => scrollToSection('Hero')}>
-        <h1>Mbong Mbong</h1>
-        <p>Animator & Digital Artist</p>
+        <h1>Mame Mor Mbacke</h1>
+        <p>Programmer & Game Designer</p>
       </div>
 
       <div className="Navbar-Right">
