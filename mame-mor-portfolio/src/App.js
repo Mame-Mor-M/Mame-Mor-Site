@@ -1,89 +1,93 @@
-import { FaInstagram, FaLinkedin, FaEnvelope, FaVolumeMute, FaVolumeUp } from 'react-icons/fa';
+import { FaGithub,FaItchIo, FaLinkedin, FaEnvelope, FaVolumeMute, FaVolumeUp, } from 'react-icons/fa';
 import { useState, useEffect, useRef } from 'react';
 import Masonry, { ResponsiveMasonry } from 'react-responsive-masonry';
 import emailjs from "@emailjs/browser";
 import './Home.css';
 
 function App() {
-  const character_designs = [
-    { content: './Illustrations/AmariSheet.png', height: 0, wide: false, vOffset: 0, hOffset: 25, width: 600 },
-    { content: './Illustrations/AmariSheet2.png', height: 0, wide: false, vOffset: 0, hOffset: 145, width: 400 },
-    { content: './Illustrations/Trio.png', height: 750, wide: false, vOffset: 0, hOffset: 65, width: 400 },
-    { content: './Illustrations/Hunter1.png', height: 800, wide: false, vOffset: 0, hOffset: 25, width: 600 },
-    { content: './Illustrations/HunterSheet.png', height: 800, wide: false, vOffset: 0, hOffset: 145, width: 400 },
-    { content: './Illustrations/Hunter2.png', height: 800, wide: false, vOffset: 0, hOffset: 65, width: 400 },
-    { content: './Illustrations/FightLady.png', height: 0, wide: false, vOffset: -700, hOffset: 1065, width: 400 },
-    { content: './Illustrations/Picture2.png', height: 800, wide: false, vOffset: 0, hOffset: 25, width: 500 },
-    { content: './Illustrations/Picture1.png', height: 800, wide: false, vOffset: 0, hOffset: 42, width: 600 },
-    { content: './Illustrations/Picture3.png', height: 800, wide: false, vOffset: 0, hOffset: 165, width: 300 },
-    { content: './Illustrations/Picture4.png', height: 800, wide: false, vOffset: 0, hOffset: 126, width: 400 },
-    { content: './Illustrations/Picture6.png', height: 0, wide: false, vOffset: -370, hOffset: 665, width: 300 },
+  const game_thumbnails = [
+    { content: './thumbnails/BusRush.png', name: "Bus Rush", desc: "Chaotic bus driving simulator"},
+    { content: './thumbnails/CitizenJane.png', name: "Bus Rush", desc: "Chaotic bus driving simulator" },
+    { content: './thumbnails/Endzone.png', name: "Bus Rush", desc: "Chaotic bus driving simulator" },
+    { content: './thumbnails/FlippedOut.jpg', name: "Bus Rush", desc: "Chaotic bus driving simulator" },
+    { content: './thumbnails/MoonlightPaws.png', name: "Bus Rush", desc: "Chaotic bus driving simulator" },
+    { content: './thumbnails/NeonVendetta.png', name: "Bus Rush", desc: "Chaotic bus driving simulator" },
+    { content: './thumbnails/PYP.png', name: "Bus Rush", desc: "Chaotic bus driving simulator" },
+    { content: './thumbnails/Upperdut.png', name: "Bus Rush", desc: "Chaotic bus driving simulator" },
 
   ]
 
-  const animation_clips = [
-    { id: 0, content: 'https://github.com/Mame-Mor-M/Mbong-Art-Portfolio/releases/download/Animation/HallwayRun.mp4', audio: false },
-    { id: 1, content: 'https://github.com/Mame-Mor-M/Mbong-Art-Portfolio/releases/download/Animation/RunawayShot.mp4', audio: false },
-    { id: 2, content: 'https://github.com/Mame-Mor-M/Mbong-Art-Portfolio/releases/download/Animation/Runaway2.mp4', audio: false },
-    { id: 2, content: 'https://github.com/Mame-Mor-M/Mbong-Art-Portfolio/releases/download/Animation/OragamiLady.mp4', audio: true },
-    { id: 3, content: 'https://github.com/Mame-Mor-M/Mbong-Art-Portfolio/releases/download/Animation/Squabble.mp4', audio: false },
-    { id: 4, content: 'https://github.com/Mame-Mor-M/Mbong-Art-Portfolio/releases/download/Animation/JumpOver.mp4', audio: false },
-    { id: 5, content: 'https://github.com/Mame-Mor-M/Mbong-Art-Portfolio/releases/download/Animation/Flip.mp4', audio: false },
-    { id: 7, content: 'https://github.com/Mame-Mor-M/Mbong-Art-Portfolio/releases/download/Animation/RunningMan.mp4', audio: false },
-    { id: 6, content: 'https://github.com/Mame-Mor-M/Mbong-Art-Portfolio/releases/download/Animation/BackpackLady.mp4', audio: false },
-    { id: 8, content: 'https://github.com/Mame-Mor-M/Mbong-Art-Portfolio/releases/download/Animation/Yourmom.mp4', audio: true },
-    { id: 9, content: 'https://github.com/Mame-Mor-M/Mbong-Art-Portfolio/releases/download/Animation/PunchingBagCut.mp4', audio: false },
-    { id: 10, content: 'https://github.com/Mame-Mor-M/Mbong-Art-Portfolio/releases/download/Animation/Quoi.mp4', audio: false },
+  const project_thumbnails = [
+    { content: './thumbnails/PostGuardian.jpg', name: "Bus Rush", desc: "Chaotic bus driving simulator" },
+    { content: './thumbnails/Pulsefex.jpg', name: "Bus Rush", desc: "Chaotic bus driving simulator" },
+    { content: 'thumbnails/MbongSite.png', name: "Artist Portfolio Website", desc: "" }
   ]
-  const [mutedVideos, setMutedVideos] = useState(() =>
-    Object.fromEntries(animation_clips.map(v => [v.id, true]))
-  );
 
-  const toggleMute = (id) => {
-    setMutedVideos(prev => ({
-      ...prev,
-      [id]: !prev[id]
-    }));
-  };
+  const website_thumbnails = [
+    {content: 'thumbnails/MbongSite.png', name: "Artist Portfolio Website", desc: ""}
+  ]
+
 
   return (
     <div className="Home">
       <Navbar />
+      <BlogPanel/>
       <div className="Hero" id="Hero">
         <video src={'https://github.com/Mame-Mor-M/Mbong-Art-Portfolio/releases/download/Animation/Flux_Intro.mp4'} muted autoPlay playsInline preload='auto' controls={false}></video>
       </div>
-      <header className="Section-Header" id="Animations">
+      <header className="Section-Header" id="Games">
         Games
         <p className='Section-Desc'></p>
       </header>
-      <div className="Animations">
+      <div className="Projects">
         <ResponsiveMasonry columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 4 }}>
           <Masonry columnsCount={4} gutter='15px'>
-            {animation_clips.map((video, i) => (
-              <div className="Animations-Clip" >
-                {video.audio ? <a className="Animation-Volume" onClick={() => toggleMute(video.id)}>{mutedVideos[video.id] ? <FaVolumeMute /> : <FaVolumeUp />}</a> : <a></a>} {/* video.muted doesn't toggle a re-render, need to use state change for this*/}
-                <video key={i} src={video.content} autoPlay muted={mutedVideos[video.id]} loop style={{ width: `97%` }}></video>
+            {game_thumbnails.map((image, i) => (
+              <div>
+                <img key={i} src={image.content} style={{ width: `100%` }} />
+                {image.name}: {image.desc}
               </div>
             ))}
+
           </Masonry>
         </ResponsiveMasonry>
-        <header className="Section-Header" id="Animations">
+        <header className="Section-Header" id="Games">
           Demo Reel
         </header>
         <video controls={true} src={'https://github.com/Mame-Mor-M/Mbong-Art-Portfolio/releases/download/Animation/Demo_Reel.mp4'}></video>
       </div>
-      <header className="Section-Header" id="Illustrations">
+      <header className="Section-Header" id="Projects">
         Other Projects
-        <p className='Section-Desc'>Character sheets & portraits</p>
+        <p className='Section-Desc'>Non-game projects</p>
       </header>
-      <div className="Illustrations">
-        <ResponsiveMasonry className="Sheet-Section" columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 4 }}>
+      <div className="Projects">
+        <ResponsiveMasonry columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 4 }}>
           <Masonry columnsCount={4} gutter='15px'>
-            {character_designs.map((image, i) => (
+            {project_thumbnails.map((image, i) => (
               <div>
                 <img key={i} src={image.content} style={{ width: `100%` }} />
+                {image.name}: {image.desc}
               </div>
             ))}
+
+          </Masonry>
+        </ResponsiveMasonry>
+      </div>
+
+      <header className="Section-Header" id="UI">
+        UI/UX Design
+        <p className='Section-Desc'>Websites & Applications</p>
+      </header>
+      <div className="Projects">
+        <ResponsiveMasonry columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 4 }}>
+          <Masonry columnsCount={4} gutter='15px'>
+            {website_thumbnails.map((image, i) => (
+              <div>
+                <img key={i} src={image.content} style={{ width: `100%` }} />
+                {image.name}: {image.desc}
+              </div>
+            ))}
+
           </Masonry>
         </ResponsiveMasonry>
       </div>
@@ -131,7 +135,7 @@ const Navbar = () => {
       <div className="Navbar-Left">
         {/*<button onClick={() => scrollToSection('About')}>About Me</button>*/}
         <button onClick={() => scrollToSection('Animations')}>Games</button>
-        <button onClick={() => scrollToSection('Illustrations')}>Other Projects</button>
+        <button onClick={() => scrollToSection('Projects')}>Other Projects</button>
       </div>
 
       <div className="Navbar-Center" onClick={() => scrollToSection('Hero')}>
@@ -140,11 +144,14 @@ const Navbar = () => {
       </div>
 
       <div className="Navbar-Right">
-        <a style={{}} href="https://www.instagram.com/mbong_mbong/" target="_blank" rel="noopener noreferrer">
-          <FaInstagram />
+        <a style={{}} href="https://github.com/Mame-Mor-M" target="_blank" rel="noopener noreferrer">
+          <FaGithub />
         </a>
-        <a style={{}} href="https://www.linkedin.com/in/mbong-mbong-929a0b35a/" target="_blank" rel="noopener noreferrer">
+        <a style={{}} href="https://www.linkedin.com/in/mame-mor-mbacke/" target="_blank" rel="noopener noreferrer">
           <FaLinkedin />
+        </a>
+        <a style={{}} href="https://itch.io/profile/nova-so1" target="_blank" rel="noopener noreferrer">
+          <FaItchIo />
         </a>
         <button style={{}} onClick={() => scrollToSection('Contact')}>
           <FaEnvelope />
@@ -201,4 +208,63 @@ const Contact = () => {
     </section>
   );
 };
+
+const BlogPanel = () => {
+  const [minimized, setMinimized] = useState(false);
+
+  const blogs = [
+    {
+      id: 1,
+      title: "Design Systems",
+      desc: "Why minimal UI scales better",
+      image: "/blog1.jpg",
+    },
+    {
+      id: 2,
+      title: "React Patterns",
+      desc: "Floating UI done right",
+      image: "/blog2.jpg",
+    },
+    {
+      id: 3,
+      title: "React Patterns",
+      desc: "Floating UI done right",
+      image: "/logo192.png",
+    },
+    {
+      id: 4,
+      title: "React Patterns",
+      desc: "Floating UI done right",
+      image: "/blog2.jpg",
+    },
+    {
+      id: 5,
+      title: "React Patterns",
+      desc: "Floating UI done right",
+      image: "/blog2.jpg",
+    },
+  ];
+
+  return (
+    <div className={`floating-panel ${minimized ? "minimized" : ""}`}>
+      <div className="panel-handle" onClick={() => setMinimized(!minimized)}>
+        <span>{minimized ? "▲ Blogs" : "▼ Blogs"}</span>
+      </div>
+
+      {!minimized && (
+        <div className="blog-list">
+          {blogs.map((blog) => (
+            <div className="blog-item" key={blog.id}>
+              <img src={blog.image} alt={blog.title} />
+              <div className="blog-text">
+                <h4>{blog.title}</h4>
+                <p>{blog.desc}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}
 export default App;

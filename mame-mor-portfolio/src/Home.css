@@ -166,7 +166,7 @@
     margin-bottom: 0.2rem;
 }
 
-.Illustrations {
+.Projects {
     text-align: center;
     background-color: #8C2504;
     min-height: 100vh;
@@ -175,7 +175,7 @@
     margin-top: 4rem;
 }
 
-.Illustrations-Grid {
+.Projects-Grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 1rem;
@@ -189,34 +189,34 @@
     margin-bottom: 1%;
 }
 
-.Illustrations-Item {
+.Projects-Item {
     break-inside: auto;
     box-sizing: border-box;
 }
 
-.Illustrations img {
+.Projects img {
     transform: scale(1);
     transition: transform 0.3s ease-in-out;
 }
 
-.Illustrations-Item img {
+.Projects-Item img {
     width: auto;
     height: auto;
     cursor: pointer;
     max-width: 600px;
 }
 
-.Illustrations img:hover {
+.Projects img:hover {
     transform: scale(1.07);
     z-index: 1000;
 }
 
-.Illustrations-Item.wide {
+.Projects-Item.wide {
     column-span: all;
     width: 100%;
 }
 
-.Illustrations-Item.wide img {
+.Projects-Item.wide img {
     width: 100%;
     max-width: 1450px;
     cursor: pointer;
@@ -308,7 +308,7 @@
         padding: 0.5rem;
     }
 
-    .Illustrations-Grid {
+    .Projects-Grid {
         grid-template-columns: 1fr;
     }
 
@@ -320,4 +320,64 @@
         width: 100%;
         padding: 1rem;
     }
+}
+
+.floating-panel {
+    position: fixed;
+    right: 24px;
+    top: 140px;
+    width: 280px;
+    max-height: 480px;
+    display: flex;
+    flex-direction: column;
+    z-index: 999;
+}
+
+/* Handle / toggle */
+.panel-handle {
+    padding: 10px 12px;
+    border: 3px solid #000;
+    background: transparent;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.blog-list {
+    margin-top: 14px;
+    padding-right: 6px;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    overflow-y: auto;
+    flex: 1;
+}
+
+.blog-item {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.blog-item img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border: 3px solid #000;
+}
+
+
+.blog-text h4 {
+    font-size: 14px;
+    margin: 0;
+}
+
+.blog-text p {
+    font-size: 12px;
+    margin: 0;
+    opacity: 0.85;
+}
+
+
+.floating-panel.minimized .blog-list {
+    display: none;
 }
