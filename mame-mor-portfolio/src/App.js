@@ -6,14 +6,14 @@ import './Home.css';
 
 function App() {
   const game_thumbnails = [
-    { content: './thumbnails/BusRush.png', name: "Bus Rush", desc: "Chaotic bus driving simulator"},
-    { content: './thumbnails/CitizenJane.png', name: "Bus Rush", desc: "Chaotic bus driving simulator" },
-    { content: './thumbnails/Endzone.png', name: "Bus Rush", desc: "Chaotic bus driving simulator" },
-    { content: './thumbnails/FlippedOut.jpg', name: "Bus Rush", desc: "Chaotic bus driving simulator" },
-    { content: './thumbnails/MoonlightPaws.png', name: "Bus Rush", desc: "Chaotic bus driving simulator" },
-    { content: './thumbnails/NeonVendetta.png', name: "Bus Rush", desc: "Chaotic bus driving simulator" },
-    { content: './thumbnails/PYP.png', name: "Bus Rush", desc: "Chaotic bus driving simulator" },
-    { content: './thumbnails/Upperdut.png', name: "Bus Rush", desc: "Chaotic bus driving simulator" },
+    { content: './thumbnails/BusRush.png', name: "Bus Rush", desc: "Chaotic bus driving simulator", video: "https://github.com/Mame-Mor-M/Mbong-Art-Portfolio/releases/download/Animation/Flux_Intro.mp4"},
+    { content: './thumbnails/CitizenJane.png', name: "Bus Rush", desc: "Chaotic bus driving simulator", video: "https://github.com/Mame-Mor-M/Mbong-Art-Portfolio/releases/download/Animation/Flux_Intro.mp4" },
+    { content: './thumbnails/Endzone.png', name: "Bus Rush", desc: "Chaotic bus driving simulator", video: "https://github.com/Mame-Mor-M/Mbong-Art-Portfolio/releases/download/Animation/Flux_Intro.mp4" },
+    { content: './thumbnails/FlippedOut.jpg', name: "Bus Rush", desc: "Chaotic bus driving simulator", video: "https://github.com/Mame-Mor-M/Mbong-Art-Portfolio/releases/download/Animation/Flux_Intro.mp4" },
+    { content: './thumbnails/MoonlightPaws.png', name: "Bus Rush", desc: "Chaotic bus driving simulator", video: "https://github.com/Mame-Mor-M/Mbong-Art-Portfolio/releases/download/Animation/Flux_Intro.mp4" },
+    { content: './thumbnails/NeonVendetta.png', name: "Bus Rush", desc: "Chaotic bus driving simulator", video: "https://github.com/Mame-Mor-M/Mbong-Art-Portfolio/releases/download/Animation/Flux_Intro.mp4" },
+    { content: './thumbnails/PYP.png', name: "Bus Rush", desc: "Chaotic bus driving simulator", video: "https://github.com/Mame-Mor-M/Mbong-Art-Portfolio/releases/download/Animation/Flux_Intro.mp4" },
+    { content: './thumbnails/Upperdut.png', name: "Bus Rush", desc: "Chaotic bus driving simulator", video: "https://github.com/Mame-Mor-M/Mbong-Art-Portfolio/releases/download/Animation/Flux_Intro.mp4" },
 
   ]
 
@@ -33,38 +33,66 @@ function App() {
       <Navbar />
       <BlogPanel/>
       <div className="Hero" id="Hero">
-        <video src={'https://github.com/Mame-Mor-M/Mbong-Art-Portfolio/releases/download/Animation/Flux_Intro.mp4'} muted autoPlay playsInline preload='auto' controls={false}></video>
+        <video src={''} muted autoPlay playsInline preload='auto' controls={false}></video>
       </div>
       <header className="Section-Header" id="Games">
         Games
         <p className='Section-Desc'></p>
       </header>
       <div className="Projects">
-        <ResponsiveMasonry columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 4 }}>
-          <Masonry columnsCount={4} gutter='15px'>
+        <ResponsiveMasonry columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 3 }}>
+          <Masonry columnsCount={3} gutter="16px">
             {game_thumbnails.map((image, i) => (
-              <div>
-                <img key={i} src={image.content} style={{ width: `100%` }} />
-                {image.name}: {image.desc}
+              <div
+                key={i}
+                className="Projects-item"
+                onMouseEnter={e => {
+                  const video = e.currentTarget.querySelector("video");
+
+                  video && video.play();
+                }}
+                onMouseLeave={e => {
+                  const video = e.currentTarget.querySelector("video");
+                  if (video) {
+                    video.pause();
+                    video.currentTime = 0;
+                  }
+                }}
+              >
+                <div className="Media">
+                  <img src={image.content} alt={image.name} />
+                  <video
+                    src={image.video}
+                    muted
+                    loop
+                    playsInline
+                    preload="metadata"
+                  />
+                </div>
+
+                <div className="Overlay">
+                  <h3>{image.name}</h3>
+                  <p>{image.desc}</p>
+                </div>
               </div>
             ))}
-
           </Masonry>
         </ResponsiveMasonry>
+
         <header className="Section-Header" id="Games">
           Demo Reel
         </header>
-        <video controls={true} src={'https://github.com/Mame-Mor-M/Mbong-Art-Portfolio/releases/download/Animation/Demo_Reel.mp4'}></video>
+        <video controls={true} src={''}></video>
       </div>
       <header className="Section-Header" id="Projects">
         Other Projects
         <p className='Section-Desc'>Non-game projects</p>
       </header>
       <div className="Projects">
-        <ResponsiveMasonry columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 4 }}>
-          <Masonry columnsCount={4} gutter='15px'>
+        <ResponsiveMasonry columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 3 }}>
+          <Masonry columnsCount={3}>
             {project_thumbnails.map((image, i) => (
-              <div>
+              <div className='Projects-item'>
                 <img key={i} src={image.content} style={{ width: `100%` }} />
                 {image.name}: {image.desc}
               </div>
@@ -74,23 +102,6 @@ function App() {
         </ResponsiveMasonry>
       </div>
 
-      <header className="Section-Header" id="UI">
-        UI/UX Design
-        <p className='Section-Desc'>Websites & Applications</p>
-      </header>
-      <div className="Projects">
-        <ResponsiveMasonry columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 4 }}>
-          <Masonry columnsCount={4} gutter='15px'>
-            {website_thumbnails.map((image, i) => (
-              <div>
-                <img key={i} src={image.content} style={{ width: `100%` }} />
-                {image.name}: {image.desc}
-              </div>
-            ))}
-
-          </Masonry>
-        </ResponsiveMasonry>
-      </div>
       <div id="Contact" className="Contact">
         <Contact />
       </div>
