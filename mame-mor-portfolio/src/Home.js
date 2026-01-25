@@ -7,15 +7,15 @@ import { Link } from 'react-router-dom';
 
 function Home() {
   const game_thumbnails = [
-    {id:"BusRush", content: './thumbnails/BusRush.png', name: "Bus Rush", desc: "A time-based arcade racing game where players must reach the final stop while picking up as many passengers as possible. The game grades players on punctuality and passenger count, with performance bonuses tied to how fast they complete their route, and how little damage their vehicle sustains.", video: "https://github.com/Mame-Mor-M/Mbong-Art-Portfolio/releases/download/Animation/Flux_Intro.mp4"},
-    { content: './thumbnails/CitizenJane.png', name: "Citizen Jane", desc: "Play as private investigator Jane, and  solve a high profile murder. Traverse through comic panels and obtain clues,  and combine them to solve the mystery.", video: "https://github.com/Mame-Mor-M/Mbong-Art-Portfolio/releases/download/Animation/Flux_Intro.mp4" },
-    { content: './thumbnails/Endzone.png', name: "Endzone", desc: "An arcade style sports survival game. Avoid opposing defenders in each region of the football field and reach the opponents end zone to win the game.", video: "https://github.com/Mame-Mor-M/Mbong-Art-Portfolio/releases/download/Animation/Flux_Intro.mp4" },
-    { content: './thumbnails/FlippedOut.jpg', name: "Flipped Out", desc: "A fast-paced mobile memory matching game with both solo and competitive play, player trophies, and a global leaderboard", video: "https://github.com/Mame-Mor-M/Mbong-Art-Portfolio/releases/download/Animation/Flux_Intro.mp4" },
-    { content: './thumbnails/MoonlightPaws.png', name: "Moonlight Paws", desc: "A puzzle-based narrative experience focused on shape recognition and spatial navigation. Each level presents a hint describing a specific shape. Players must read the hint carefully, choose a direction to move, and explore the space to find the correct match.", video: "https://github.com/Mame-Mor-M/Mbong-Art-Portfolio/releases/download/Animation/Flux_Intro.mp4" },
-    { content: './thumbnails/NeonVendetta.png', name: "Neon Vendetta", desc: "Experience a 2D cyberpunk action platformer heavily inspired by SpeedRunners, and Vector. Each level introduces new twists on mechanics from intense boss fights to platformer minigames.", video: "https://github.com/Mame-Mor-M/Mbong-Art-Portfolio/releases/download/Animation/Flux_Intro.mp4" },
-    { content: './thumbnails/PYP.png', name: "Pick Your Poison", desc: "A survival taste-testing game where players must test dishes for poison before serving them. Tasting a dish will reveal ingredients on a one-per bite basis, players must must control their bites to avoid eating poison, and tasting too much before serving.", video: "https://github.com/Mame-Mor-M/Mbong-Art-Portfolio/releases/download/Animation/Flux_Intro.mp4" },
-    { content: './thumbnails/Upperdut.png', name: "Upperdut", desc: "A unique take on the platform fighter genre, Upperdut is a 2-player game where instead of fighting each other, players work together! Conquer the heights of the gym as you work your way up to the top.", video: "https://github.com/Mame-Mor-M/Mbong-Art-Portfolio/releases/download/Animation/Flux_Intro.mp4" },
-    { content: './thumbnails/Othello.png', name: "Othello", desc: "A digital recreation of the board game Othello built entirely in Java using JavaFX for the GUI.  this application allows for Human vs. Human, Human vs. CPU, and CPU vs. CPU gameplay.", video: "https://github.com/Mame-Mor-M/Mbong-Art-Portfolio/releases/download/Animation/Flux_Intro.mp4" },
+    {id:"Bus-Rush", content: './thumbnails/BusRush.png', name: "Bus Rush", desc: "A time-based arcade racing game where players must reach the final stop while picking up as many passengers as possible. The game grades players on punctuality and passenger count, with performance bonuses tied to how fast they complete their route, and how little damage their vehicle sustains.", video: "https://github.com/Mame-Mor-M/Mbong-Art-Portfolio/releases/download/Animation/Flux_Intro.mp4"},
+    { id: "Citizen-Jane", content: './thumbnails/CitizenJane.png', name: "Citizen Jane", desc: "Play as private investigator Jane, and  solve a high profile murder. Traverse through comic panels and obtain clues,  and combine them to solve the mystery.", video: "https://github.com/Mame-Mor-M/Mbong-Art-Portfolio/releases/download/Animation/Flux_Intro.mp4" },
+    { id: "Endzone", content: './thumbnails/Endzone.png', name: "Endzone", desc: "An arcade style sports survival game. Avoid opposing defenders in each region of the football field and reach the opponents end zone to win the game.", video: "https://github.com/Mame-Mor-M/Mbong-Art-Portfolio/releases/download/Animation/Flux_Intro.mp4" },
+    { id: "Flipped-Out", content: './thumbnails/FlippedOut.jpg', name: "Flipped Out", desc: "A fast-paced mobile memory matching game with both solo and competitive play, player trophies, and a global leaderboard", video: "https://github.com/Mame-Mor-M/Mbong-Art-Portfolio/releases/download/Animation/Flux_Intro.mp4" },
+    { id: "Moonlight-Paws", content: './thumbnails/MoonlightPaws.png', name: "Moonlight Paws", desc: "A puzzle-based narrative experience focused on shape recognition and spatial navigation. Each level presents a hint describing a specific shape. Players must read the hint carefully, choose a direction to move, and explore the space to find the correct match.", video: "https://github.com/Mame-Mor-M/Mbong-Art-Portfolio/releases/download/Animation/Flux_Intro.mp4" },
+    { id: "Neon-Vendetta", content: './thumbnails/NeonVendetta.png', name: "Neon Vendetta", desc: "Experience a 2D cyberpunk action platformer heavily inspired by SpeedRunners, and Vector. Each level introduces new twists on mechanics from intense boss fights to platformer minigames.", video: "https://github.com/Mame-Mor-M/Mbong-Art-Portfolio/releases/download/Animation/Flux_Intro.mp4" },
+    { id: "Pick-Your-Poison", content: './thumbnails/PYP.png', name: "Pick Your Poison", desc: "A survival taste-testing game where players must test dishes for poison before serving them. Tasting a dish will reveal ingredients on a one-per bite basis, players must must control their bites to avoid eating poison, and tasting too much before serving.", video: "https://github.com/Mame-Mor-M/Mbong-Art-Portfolio/releases/download/Animation/Flux_Intro.mp4" },
+    { id: "Upperdut", content: './thumbnails/Upperdut.png', name: "Upperdut", desc: "A unique take on the platform fighter genre, Upperdut is a 2-player game where instead of fighting each other, players work together! Conquer the heights of the gym as you work your way up to the top.", video: "https://github.com/Mame-Mor-M/Mbong-Art-Portfolio/releases/download/Animation/Flux_Intro.mp4" },
+    { id: "Othello", content: './thumbnails/Othello.png', name: "Othello", desc: "A digital recreation of the board game Othello built entirely in Java using JavaFX for the GUI.  this application allows for Human vs. Human, Human vs. CPU, and CPU vs. CPU gameplay.", video: "https://github.com/Mame-Mor-M/Mbong-Art-Portfolio/releases/download/Animation/Flux_Intro.mp4" },
   ]
 
   const project_thumbnails = [
@@ -27,16 +27,16 @@ function Home() {
   return (
     <div className="Home">
       <Navbar />
-      <BlogPanel/>
+      {/*<BlogPanel/>*/}
       <div className="Hero" id="Hero">
-        <video src={''} muted autoPlay playsInline preload='auto' controls={false}></video>
+        <video src={'./thumbnails/GameReel.mp4'} muted autoPlay loop playsInline preload='auto' controls={false}></video>
       </div>
-      <header className="Section-Header" id="Games">
-        Games
-        <p className='Section-Desc'></p>
-      </header>
-      <div className="Projects">
-        <ResponsiveMasonry columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 3 }}>
+
+      <div className="Projects" id="Games">
+        <header className="Section-Header" >
+          Games
+        </header>
+        <ResponsiveMasonry columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 3, 2000: 4, 2500: 5, 3000: 7, 3500: 10}}>
           <Masonry columnsCount={3} gutter="16px">
             {game_thumbnails.map((image, i) => (
               <Link key={image.id} to={`/projects/${image.id}`}>
@@ -77,26 +77,28 @@ function Home() {
           </Masonry>
         </ResponsiveMasonry>
       </div>
-      <header className="Section-Header" id="Projects">
-        Tech Stack
-        <p className='Section-Desc'>Non-game projects</p>
-      </header>
-      <div className="Tech-Stack">
-        <ResponsiveMasonry columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 4}}>
-          <Masonry className="Skill" columnsCount={4} >
-            <FaEnvelope  size={'5rem'}/>
-            <FaEnvelope size={'5rem'} />
-            <FaEnvelope size={'5rem'} />
-            <FaEnvelope size={'5rem'} />
-          </Masonry>
-        </ResponsiveMasonry>
+
+      <div className="Stack-Section">
+        <h2 className="Stack-Title">Skills</h2>
+
+        <div className="Stack-Grid">
+          <FaEnvelope />
+          <FaEnvelope />
+          <FaEnvelope />
+          <FaEnvelope />
+          <FaEnvelope />
+          <FaEnvelope />
+          <FaEnvelope />
+          <FaEnvelope />
+        </div>
       </div>
 
-      <header className="Section-Header" id="Projects">
-        Other Projects
-        <p className='Section-Desc'>Non-game projects</p>
-      </header>
+
       <div className="Projects">
+        <header className="Section-Header" id="Projects">
+          Other Projects
+          <p className='Section-Desc'>Non-game projects</p>
+        </header>
         <ResponsiveMasonry columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 3 }}>
           <Masonry columnsCount={3} gutter="16px">
             {project_thumbnails.map((image, i) => (
@@ -164,7 +166,7 @@ const Navbar = () => {
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
-      if (currentScrollY > lastScrollY && currentScrollY > 100) {
+      if (currentScrollY > lastScrollY && currentScrollY > 10) {
         setVisible(false);
       } else {
         setVisible(true);
@@ -180,7 +182,7 @@ const Navbar = () => {
     <nav className={`Navbar ${visible ? 'visible' : 'hidden'}`}>
       <div className="Navbar-Left">
         {/*<button onClick={() => scrollToSection('About')}>About Me</button>*/}
-        <button onClick={() => scrollToSection('Animations')}>Games</button>
+        <button onClick={() => scrollToSection('Games')}>Games</button>
         <button onClick={() => scrollToSection('Projects')}>Other Projects</button>
       </div>
 
