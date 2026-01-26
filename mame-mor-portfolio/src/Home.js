@@ -1,4 +1,6 @@
-import { FaGithub,FaItchIo, FaLinkedin, FaEnvelope, FaVolumeMute, FaVolumeUp, } from 'react-icons/fa';
+import { FaGithub,FaItchIo, FaLinkedin, FaEnvelope, FaUnity, FaJava, FaReact, FaPython , FaFigma} from 'react-icons/fa';
+import { SiBlender, SiGodotengine, SiJavascript, SiMysql, SiC, SiFlutter, SiAndroidstudio, SiFmod,   } from "react-icons/si";
+import { PiFileCpp, PiFileSql, PiFileC, PiFileCSharp} from "react-icons/pi"
 import { useState, useEffect, useRef } from 'react';
 import Masonry, { ResponsiveMasonry } from 'react-responsive-masonry';
 import emailjs from "@emailjs/browser";
@@ -29,7 +31,7 @@ function Home() {
       <Navbar />
       {/*<BlogPanel/>*/}
       <div className="Hero" id="Hero">
-        <video src={'./thumbnails/GameReel.mp4'} muted autoPlay loop playsInline preload='auto' controls={false}></video>
+        <video src={'https://github.com/Mame-Mor-M/Mame-Mor-Site/releases/download/PortfolioVids/GameReel.mp4'} muted autoPlay loop playsInline preload='auto' controls={false}></video>
       </div>
 
       <div className="Projects" id="Games">
@@ -82,16 +84,28 @@ function Home() {
         <h2 className="Stack-Title">Skills</h2>
 
         <div className="Stack-Grid">
-          <FaEnvelope />
-          <FaEnvelope />
-          <FaEnvelope />
-          <FaEnvelope />
-          <FaEnvelope />
-          <FaEnvelope />
-          <FaEnvelope />
-          <FaEnvelope />
+          <FaUnity />
+          <SiBlender/>
+          <SiGodotengine/>
+          <FaPython />
+          <FaJava />
+          <SiJavascript />
+          <FaReact />
+          <PiFileCpp />
+          <SiC />
+          <SiFlutter />
+          <SiAndroidstudio />
+          <FaFigma/>
+          <SiMysql />
+          <PiFileSql/>
+          <SiFmod/>
+          <PiFileC/>
+          <PiFileCSharp/>
         </div>
       </div>
+
+
+      
 
 
       <div className="Projects">
@@ -139,6 +153,33 @@ function Home() {
         </ResponsiveMasonry>
       </div>
 
+      <div className="About-Section">
+        <h2 className="About-Title">About Me</h2>
+
+        <div className="About-Grid">
+          {/* Left Content */}
+          <div className="About-Left">
+            <h3 className="About-Name">Mame Mor Mbacke</h3>
+            <p className="About-Role">Programmer & Game Designer</p>
+
+            <div className="About-Description">
+              <p>
+                I'm a fourth year Computer Science student at York University and an aspiring Game Developer. 
+                I've always had an idea that I wanted to pursue game development ever since I was a kid making levels in Roblox Studio, 
+                here my love of video games grew from enjoying gameplay, to enjoying the creation process. 
+                This is what pushed me into the programming space and from there allowed me to learn so much more and grow a new interest in the field of 
+                Computer Science & Game Development.
+              </p>
+            </div>
+          </div>
+
+          {/* Right Image Placeholder */}
+          <div className="About-Right">
+            <img src="./other/MameMorMbacke.jpg" className="About-Image"></img>
+          </div>
+        </div>
+      </div>
+
       <div id="Contact" className="Contact">
         <Contact />
       </div>
@@ -159,7 +200,7 @@ const Navbar = () => {
   };
 
   useEffect(() => {
-    const timer = setTimeout(() => setVisible(true), 9000); // Play around with time here, idk if good yet
+    const timer = setTimeout(() => setVisible(true), 500); // Play around with time here, idk if good yet
     return () => clearTimeout(timer);
   }, []);
 
@@ -180,18 +221,14 @@ const Navbar = () => {
 
   return (
     <nav className={`Navbar ${visible ? 'visible' : 'hidden'}`}>
-      <div className="Navbar-Left">
-        {/*<button onClick={() => scrollToSection('About')}>About Me</button>*/}
-        <button onClick={() => scrollToSection('Games')}>Games</button>
-        <button onClick={() => scrollToSection('Projects')}>Other Projects</button>
-      </div>
 
       <div className="Navbar-Center" onClick={() => scrollToSection('Hero')}>
-        <h1>Mame Mor Mbacke</h1>
-        <p>Programmer & Game Designer</p>
+        <h1>M.</h1>
       </div>
 
       <div className="Navbar-Right">
+        <button onClick={() => scrollToSection('Games')}>Games</button>
+        <button onClick={() => scrollToSection('Projects')}>Other Projects</button>
         <a style={{}} href="https://github.com/Mame-Mor-M" target="_blank" rel="noopener noreferrer">
           <FaGithub />
         </a>
