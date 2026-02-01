@@ -23,11 +23,12 @@ const GamePage = () => {
                         <h2>Engine & Software: {game.engine}</h2>
                         <h2>Team Size: {game.team}</h2>
                         <h2>Game Page: <a target="_blank" href={`${game.page}`}>{game.page}</a></h2>
-                        <p>{game.desc}</p>
+                        
                     </section>
                     {/* HERO MEDIA */}
                     <section className="Hero-Media">
                         <video controls muted src={game.video} alt={game.name} />
+                        <p>{game.desc}</p>
                     </section>
 
 
@@ -36,26 +37,35 @@ const GamePage = () => {
                         {game.systemName?.map((sys, i) => (
                             i % 2 == 0 ?
                                 <div>
-                                    <h2 className='System-Header' style={{ textAlign: 'left' }}>{sys}</h2>
+                                    <h2 className='System-Header' >{sys}</h2>
                                     <div className="System-Content">
-                                        <img src={game.systemImage[i]} alt="System concept" />
+                                        {game?.systemImage[i] != "" ? <img src={game?.systemImage[i]} style={{ maxWidth: "700px" }} /> : <video src={game?.systemVideo[i]} style={{ maxWidth: "700px" }} loop autoPlay></video>}
                                         <div className="System-Text">
                                             <p>
-                                                {game.systemDesc[i]}
+                                                {renderDescription(game.systemDesc[i])}
+                                                <br />
+                                                <br />
+                                                <a target="_blank" rel="noreferrer" href={`${game?.systemLink[i]}`}>{game?.systemName[i]} Script on GitHub</a>
                                             </p>
                                         </div>
+                                        
+   
                                     </div>
                                 </div>
                                 :
                                 <div>
-                                    <h2 className='System-Header'>{sys}</h2>
+                                    <h2 className='System-Header' >{sys}</h2>
                                     <div className="System-Content">
                                         <div className="System-Text">
                                             <p>
-                                                {game.systemDesc[i]}
+                                                {renderDescription(game.systemDesc[i])}
+                                                <br />
+                                                <br />
+                                                <a target="_blank" rel="noreferrer" href={`${game?.systemLink[i]}`}>{game?.systemName[i]} Script on GitHub</a>
                                             </p>
                                         </div>
-                                        <img src={game.systemImage[i]} alt="System concept" />
+                                        {game?.systemImage[i] != "" ? <img src={game?.systemImage[i]} style={{ maxWidth: "700px" }} /> : <video src={game?.systemVideo[i]} style={{ maxWidth: "700px" }} loop autoPlay></video>}
+                                        <video src={game?.systemVideo[i]} loop autoPlay></video>
                                     </div>
                                 </div>
 
@@ -66,7 +76,7 @@ const GamePage = () => {
                     </section>
                     <section className="Gallery">
                         <h1 className='Section-Header'>GALLERY</h1>
-                        <ResponsiveMasonry columnsCountBreakPoints={{ 350: 1, 600: 2, 900: 2 }}>
+                        <ResponsiveMasonry columnsCountBreakPoints={{ 350: 1, 600: 2, 900: 3 }}>
                             <Masonry columnsCount={2} gutter='16px'>
                                 {game.gallery?.map((image) => (
                                     <img src={image}></img>
@@ -136,5 +146,40 @@ const Navbar = () => {
         </nav>
     );
 };
+
+function renderDescription(text) {
+    const regex = /\/~\s*(.*?)\s*~\//g;
+    const parts = [];
+    let lastIndex = 0;
+    let match;
+
+    while ((match = regex.exec(text)) !== null) {
+        if (match.index > lastIndex) {
+            parts.push(
+                <p key={lastIndex}>
+                    {text.slice(lastIndex, match.index)}
+                </p>
+            );
+        }
+
+        parts.push(
+            <h4 key={match.index}>
+                {match[1]}
+            </h4>
+        );
+
+        lastIndex = regex.lastIndex;
+    }
+
+    if (lastIndex < text.length) {
+        parts.push(
+            <p key={lastIndex + "end"}>
+                {text.slice(lastIndex)}
+            </p>
+        );
+    }
+
+    return parts;
+}
 
 export default GamePage;

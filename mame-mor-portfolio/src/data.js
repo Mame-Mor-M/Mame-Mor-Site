@@ -8,16 +8,15 @@
       engine: "Unity, Blender",
       team: "1",
       page: "https://nova-so1.itch.io/bus-rush",
-      desc: "A time-based arcade racing game where players must reach the final stop while picking up as many passengers as possible. The game grades players on punctuality and passenger count, with performance bonuses tied to how fast they complete their route, and how little damage their vehicle sustains.", 
+      desc: "Bus Rush is a time-based arcade racing game where players must reach the final stop while picking up as many passengers as possible under pressure. As a city bus driver, players face tight schedules, branching route decisions, and crowded traffic, all while managing the chaos of urban transit. The game grades players on punctuality and passenger count, with performance bonuses tied to how well each stop is handled.", 
       video: "https://github.com/Mame-Mor-M/Mame-Mor-Site/releases/download/PortfolioVids/BusRush.mp4",
-      gallery: ["/Thumbnails/BusRush.png", "/Thumbnails/BusRush.png", "/Thumbnails/BusRush.png", "/Thumbnails/BusRush.png"],
-      systemImage: ["/Thumbnails/BusRush.png", "/Thumbnails/BusRush.png", "/Thumbnails/BusRush.png"],
-      systemName: ["System 1", "System 2", "System 3"],
-      systemDesc: ["BUS RUSH BUS AND RUSHING", "BUS RUSH BUS AND RUSHING", "BUS RUSH BUS AND RUSHING"], 
-      gallery: ["/Thumbnails/BusRush.png", "/Thumbnails/BusRush.png", "/Thumbnails/BusRush.png", "/Thumbnails/BusRush.png"], 
-      systemImage: ["/Thumbnails/BusRush.png", "/Thumbnails/BusRush.png", "/Thumbnails/BusRush.png"],
-      systemName: ["System 1", "System 2", "System 3"],
-      systemDesc: ["BUS RUSH BUS AND RUSHING", "BUS RUSH BUS AND RUSHING", "BUS RUSH BUS AND RUSHING"]
+      gallery: ["/Images/Bus.png", "/Images/BusCity.png", "/Images/City.png" ],
+      systemImage: ["/Images/BusRushInspector.png", "/Images/BRPassengers.png"],
+      systemVideo: ["/projectGifs/UpperdutInspector.mp4"],
+      systemLink: ["https://github.com/Mame-Mor-M/RacingGameUnity3D/blob/main/Assets/Scripts/BusController.cs", "https://github.com/Mame-Mor-M/RacingGameUnity3D/blob/main/Assets/Scripts/BusStopBehavior.cs"],
+      systemName: ["Bus Controller", "Passenger Boarding & Bus Stop System"],
+      systemDesc: ["/~ Steering & Physics ~/Bus physics and controls relies entirely on WheelColliders for movement, steering, and braking rather than transform-based motion. This allows Unity’s physics engine to handle suspension, friction, slip, and torque transfer, resulting in more believable vehicle behavior under acceleration, turning, and braking. \n\nEach wheel is defined as a structured data type containing: \n- A WheelCollider (physics simulation) \n- A wheel model (visual representation) \n- An axle type (Front or Rear) \n\nThis separation allows logic to be applied selectively based on wheel role. \n\n/~ Front-Wheel Drive & Wheel Animations ~/Steering is intentionally restricted to front axle wheels only, to simulate front-wheel steering mechanics. To make steering feel responsive and stable, Lerping is used to prevent abrupt direction changes, and smoothing values are applied depending on whether the player is actively steering or releasing input. \n\nEach frame, the wheel models are aligned with their corresponding WheelColliders using the colliders worldPos value to synchronize the visual feedback with player actions", 
+        "/~ Passenger Data & Spawning ~/This system manages passenger spawning, queuing, and boarding behavior at bus stops, integrating directly with the bus state to create a believable public transport interaction loop. \n\nPassengers are spawned dynamically at runtime using a prefab-based approach combined with randomized passenger archetypes. This approach worked well because: \n\n- Passenger roles are defined as data entries, allowing easy expansion without restructuring core logic.\n- Each passenger is instantiated from a shared prefab and assigned a type identity, enabling future behavior branching (e.g., crime events, fare checks, combat scenarios).\n- This setup supports scalable NPC variation while keeping memory usage efficient.\n\n/~ Passenger Boarding ~/Passenger boarding is gated behind bus state conditions:\n- The bus must be fully stopped\n- The bus must be inside the correct pickup zone\n- Boarding occurs one passenger at a time"],
     },
     {
       id: "Citizen-Jane", 
@@ -27,16 +26,16 @@
       engine: "Godot",
       team: "15+",
       page: "https://nova-so1.itch.io/bus-rush",
-      desc: "Play as private investigator Jane, and  solve a high profile murder. Traverse through comic panels and obtain clues,  and combine them to solve the mystery.", 
+      desc: "Citizen Jane is a detective mystery noir set in a big metropolitan city. Play as private investigator Jane, and solve a high profile murder. Traverse through comic panels and obtain clues, and combine them to solve the mystery. \n\n Building the player movement and inventory systems were my responsibilities. Movement was initially more complex with sprinting, crouching, climbing ladders, and perspective switching being present, but for design reasons and time constraints, simple top-down and side-to-side movement was what we decided to keep. \n\nThe video above showcases a level I implemented. Dialogue, movement, and inventory systems can be seen in action.\n\nThank you to all team members of the Game Devs @ York University club for an amazing development experience!", 
       video: "https://github.com/Mame-Mor-M/Mame-Mor-Site/releases/download/PortfolioVids/CitizenJane.mp4",
-      gallery: ["/Thumbnails/BusRush.png", "/Thumbnails/BusRush.png", "/Thumbnails/BusRush.png", "/Thumbnails/BusRush.png"],
-      systemImage: ["/Thumbnails/BusRush.png", "/Thumbnails/BusRush.png", "/Thumbnails/BusRush.png"],
-      systemName: ["System 1", "System 2", "System 3"],
-      systemDesc: ["BUS RUSH BUS AND RUSHING", "BUS RUSH BUS AND RUSHING", "BUS RUSH BUS AND RUSHING"],
-      gallery: ["/Thumbnails/BusRush.png", "/Thumbnails/BusRush.png", "/Thumbnails/BusRush.png", "/Thumbnails/BusRush.png"],
-      systemImage: ["/Thumbnails/BusRush.png", "/Thumbnails/BusRush.png", "/Thumbnails/BusRush.png"],
-      systemName: ["System 1", "System 2", "System 3"],
-      systemDesc: ["BUS RUSH BUS AND RUSHING", "BUS RUSH BUS AND RUSHING", "BUS RUSH BUS AND RUSHING"]
+      gallery: ["/Images/citizenjanedialogue.jpg", "/Images/citizenjaneinquire.jpg", "/Images/citizenjaneinventory.jpg", "/Images/citizenjanemenu.jpg", "/Images/citizenjaneposter.png"],
+      systemImage: ["/Images/JaneInventory.png", "/Images/JaneMove.png",],
+      systemVideo: ["/projectGifs/UpperdutInspector.mp4"],
+      systemLink: ["https://github.com/GDYUClub/term-project-w25/blob/main/src/clues/clue_grid_menu.gd","https://github.com/GDYUClub/term-project-w25/blob/main/src/player/code/player.gd"],
+      systemName: ["Inventory System", "Player Movement",],
+      systemDesc: ["Creating an inventory system for this style of game was interesting. Using GDScript the inventory clue panel is populated with grid cells with the maximum # of cells corresponding to the number of clue items that need to be arranged (as seen in screenshot #1). All clue grids were instantiated with indexes which acted as a clue ID, these would later be compared with the images placed in the grid cells to determine if the player has ordered clues correctly. Feedback is given every time a clue is dropped on a grid cell in which this clue becomes that cells child."
+        , "Movement type is activated based on a move_type Enum which is accessed whenever a panel on the screen is entered by the player (Check image #3 above to see a level with panels). To make the sprite visual feedback seamless, a function which accepts the move_type enum as a parameter is accessible and changes the character sprite based on top-down or side-scroller movement. Climbing ladders was switched to an elevator system in which, upon interaction, players would be locked and ascend/descend depending on the elevators current position."
+      ]
     },
     {
       id: "Endzone", 
@@ -48,14 +47,12 @@
       page: "https://mamemor.itch.io/endzone",
       desc: "An arcade style sports survival game. Avoid opposing defenders in each region of the football field and reach the opponents end zone to win the game.", 
       video: "https://github.com/Mame-Mor-M/Mame-Mor-Site/releases/download/PortfolioVids/EndzoneGameplay.mp4",
-      gallery: ["/Thumbnails/BusRush.png", "/Thumbnails/BusRush.png", "/Thumbnails/BusRush.png", "/Thumbnails/BusRush.png"],
-      systemImage: ["/Thumbnails/BusRush.png", "/Thumbnails/BusRush.png", "/Thumbnails/BusRush.png"],
-      systemName: ["System 1", "System 2", "System 3"],
-      systemDesc: ["BUS RUSH BUS AND RUSHING", "BUS RUSH BUS AND RUSHING", "BUS RUSH BUS AND RUSHING"],
-      gallery: ["/Thumbnails/BusRush.png", "/Thumbnails/BusRush.png", "/Thumbnails/BusRush.png", "/Thumbnails/BusRush.png"],
-      systemImage: ["/Thumbnails/BusRush.png", "/Thumbnails/BusRush.png", "/Thumbnails/BusRush.png"],
-      systemName: ["System 1", "System 2", "System 3"],
-      systemDesc: ["BUS RUSH BUS AND RUSHING", "BUS RUSH BUS AND RUSHING", "BUS RUSH BUS AND RUSHING"]
+      gallery: ["/images/Endzone_Defense.png", "/images/Endzone_Down.png", "/images/Endzone_Gain.png", "/images/Endzone_Field-.png"],
+      systemImage: ["/images/Endzone_Play.png", "/images/Endzone_Doctor.png",],
+      systemVideo: ["/projectGifs/UpperdutInspector.mp4"],
+      systemLink: ["https://mamemor.itch.io/endzone"],
+      systemName: ["Gameplay Objective", "The Sideline",],
+      systemDesc: ["In the single-player version of endzone, the user controls 1 player who must make their way to the end of the field with the most points possible. Players start the game with 16 Durability points, 100 stamina, and 4 downs. When any of these values reach 0 the player loses. In each level(Front field, midfield, and endzone) there are enemy players who are trying to tackle the user, if the user chooses to attempt and gain yards a random number is selected on both ends between the player and the enemy. If the player yards gained is higher than the enemy yards gained, the player loses 1 durability, 20 stamina, and they gain yards that can be used as an in-game currency to purchase a point multiplier, more stamina, or more durability back on the sideline. Losing results in a loss of 4 durability and a loss of yards.", "At any point the player can go to the right side of the screen to return to the sideline and stock up, but doing so will result in every scene being reset, so the player will need to start from the beginning, but this time with refreshed attributes and yards.The goal of the game is to enter the endzone with as many spendable yards as possible, the strategy portion of this game that was translated from the board game version is the fact that players must make good decisions, they cannot run around attempting to gain yards on every enemy as fighting 5 enemies in a row will result in fully losing stamina.The player must also be mindful that they can skip encounters by using downs, but they are limited to 4 for the whole game.", ],
     },
     {
       id: "Flipped-Out", 
@@ -67,10 +64,14 @@
       page: "https://github.com/jasminSlootweg/flipped_out",
       desc: "A fast-paced mobile memory matching game with both solo and competitive play, player trophies, and a global leaderboard", 
       video: "https://github.com/Mame-Mor-M/Mame-Mor-Site/releases/download/PortfolioVids/FlippedOut.Demo.mp4",
-      gallery: ["/Thumbnails/BusRush.png", "/Thumbnails/BusRush.png", "/Thumbnails/BusRush.png", "/Thumbnails/BusRush.png"],
-      systemImage: ["/Thumbnails/BusRush.png", "/Thumbnails/BusRush.png", "/Thumbnails/BusRush.png"],
-      systemName: ["System 1", "System 2", "System 3"],
-      systemDesc: ["BUS RUSH BUS AND RUSHING", "BUS RUSH BUS AND RUSHING", "BUS RUSH BUS AND RUSHING"]
+      gallery: ["/Images/Flipped1.jpg", "/Images/Flipped2.jpg", "/Images/Flipped4.jpg", "/Images/Flipped5.jpg", "/Images/Flipped6.jpg", "/Images/Flipped8.jpg", "/Images/Flipped9.jpg", "/Images/Flipped10.jpg", "/Images/Flipped11.jpg", "/Images/Flipped12.jpg"],
+      systemImage: ["/Images/Flipped3.jpg", "/Images/FlippedOnline.jpg", "/Images/FlippedBoard.jpg"],
+      systemVideo: ["/projectGifs/UpperdutInspector.mp4"],
+      systemLink: ["https://github.com/jasminSlootweg/flipped_out/blob/main/lib/game_screen.dart", "https://github.com/jasminSlootweg/flipped_out/blob/main/lib/game_screen.dart","https://github.com/jasminSlootweg/flipped_out/blob/main/lib/leaderboard.dart"],
+      systemName: ["Solo Mode", "Battle Mode", "Leaderboard (Solo & Battle Mode)"],
+      systemDesc: ["/~Tile Grid State Management~/GameScreen is a stateful widget that controls the board, score, rounds, and animations. We rendered the grid using GridView.builder with parameters allowing dynamic board sizes. This was especially important for creating bigger tilesets in more difficult game modes without doing it manually. Tiles are abstracted into a reusable FlipTile widget with animations that the user can toggle on and off in the settings menu (for performance). \n\nThe board is generated using a seeded random number generator:\n\nfinal rng = seed != null ? Random(seed) : Random();\npairs.shuffle(rng);/~Tile Matching~/Each tile reveals a shape drawn using the CustomPainter. On tap:\n- First tile starts a score decay timer\n- Second tile checks for a match\n- If tiles match --> Score added\n- If tiles mismatch --> tiles flip to unrevealed w/ delay", 
+        "From a design standpoint we wanted to deviate from the typical singleplayer aspect of a memory matching game while still giving players the option. Hence we implemented a battle-mode, a real-time 1v1 match against a real player where both board states are synchronized and the first person to match all tiles wins. /~Firebase & Board State~/For real-time syncing of user board s we used Cloud Firestore with document listeners:\n\ndocRef.snapshots().listen(...)\n\nUsing this allowed us to take 'snapshots' of the board state at quick intervals and synchronize the board seed, player scores, and game state (playing or finished), all being entities that exist within the Firebase match document/~Match End~/When a player finishes (only one player needs to match all tiles) the final score is written to Firestore, and the winner is computed server-side via the shared document. Both players are redirected to the results screen and player stats are updated accordingly (XP and battle stats)",
+        "The leaderboard is implemented as a cloud-synced ranking system using Cloud Firestore. User data is retrieved from both of our Firestore collections, one for solo data and one for battle mode data, both being synced up by user ID. Updates are automatically streamed by Firestore, again using snapshots, so new rankings can be seen while the leaderboard is open.\n\n The queries we make rely on Firestore indexing, with the UI only rebvuilding when data changes as opposed to every frame, this way we avoid unnecessary redraws which might hinder performance. "]
     },
     {
       id: "Moonlight-Paws", 
@@ -83,9 +84,11 @@
       desc: "A puzzle-based narrative experience focused on shape recognition and spatial navigation. Each level presents a hint describing a specific shape. Players must read the hint carefully, choose a direction to move, and explore the space to find the correct match.", 
       video: "https://github.com/Mame-Mor-M/Mame-Mor-Site/releases/download/PortfolioVids/MoonlightPaws-youtube.mp4",
       gallery: ["/Thumbnails/BusRush.png", "/Thumbnails/BusRush.png", "/Thumbnails/BusRush.png", "/Thumbnails/BusRush.png"],
-      systemImage: ["/Thumbnails/BusRush.png", "/Thumbnails/BusRush.png", "/Thumbnails/BusRush.png"],
-      systemName: ["System 1", "System 2", "System 3"],
-      systemDesc: ["BUS RUSH BUS AND RUSHING", "BUS RUSH BUS AND RUSHING", "BUS RUSH BUS AND RUSHING"]
+      systemImage: ["/Images/PawsSystem.png"],
+      systemVideo: [""],
+      systemLink: ["https://github.com/Mame-Mor-M/Moonlight-Paws/blob/main/moonlight-paws/Scripts/player_movement.gd"],
+      systemName: ["Navigation Region & Movement"],
+      systemDesc: ["/~Movement~/The player moves on a grid of interconnected tiles, starting from a base tile. Each tile contains directional arrows(up, down, left, right). Clicking an arrow moves the player only in that tile’s predefined direction.. \n\nThis works because the player is a CharacterBody2D driven by a NavigationAgent2D. Each frame: \n- The agent calculates the next path point\n- Velocity is applied toward that point\n- Movement stops automatically when the path is complete /~Branch Tiles~/Tiles are implemented as Area2D nodes. When the player enters a tile the arrow UI becomes visible and movement options are restricted to valid directions for THAT tile"]
     },
     {
       id: "Neon-Vendetta", content: './thumbnails/NeonVendetta.png', 
@@ -94,12 +97,15 @@
       engine: "Unity",
       team: "5",
       page: "https://mamemor.itch.io/neon-vendetta",
-      desc: "Experience a 2D cyberpunk action platformer heavily inspired by SpeedRunners, and Vector. Each level introduces new twists on mechanics from intense boss fights to platformer minigames.", 
+      desc: "Neon Vendetta is a fast-paced, 2D cyberpunk action platformer heavily inspired by Mirror’s Edge, SpeedRunners, and Vector. The game fuses fluid parkour movement with runner-style gameplay and action-RPG elements. Each level introduces new twists on mechanics from intense boss fights to platformer minigames styled after Jump King. The goal was to build a game that felt alive in its movement, responsive in its controls, and stylish in its execution.", 
       video: "https://github.com/Mame-Mor-M/Mame-Mor-Site/releases/download/PortfolioVids/NeonVendetta.Walkthrough.2.mp4",
       gallery: ["/Thumbnails/BusRush.png", "/Thumbnails/BusRush.png", "/Thumbnails/BusRush.png", "/Thumbnails/BusRush.png"],
       systemImage: ["/Thumbnails/BusRush.png", "/Thumbnails/BusRush.png", "/Thumbnails/BusRush.png"],
-      systemName: ["System 1", "System 2", "System 3"],
-      systemDesc: ["BUS RUSH BUS AND RUSHING", "BUS RUSH BUS AND RUSHING", "BUS RUSH BUS AND RUSHING"]
+      systemVideo: [""],
+      systemLink: ["https://github.com/Mame-Mor-M/Parkour-Platformer/blob/main/Assets/Scripts/PlayerMovement.cs","https://github.com/Mame-Mor-M/Parkour-Platformer/blob/main/Assets/Scripts/ProjectileScript.cs"],
+      systemName: ["Movement Controller","Combat System"],
+      systemDesc: ["/~Movement~/Movement is done in a non-complex manner, it's implemented using Rigidbody2D physics. The behavior is state-driven(running, walking, jumping, sliding, swinging).",
+        "/~Combat~/There are two attack methods, one close ranged via the sword swing, and one long-range via a shuriken throw. \n\nThe sword swing uses a collider2D to establish a contact radius in which entities will be damaged/destroyed if the player swings their blade. I used an IEnumerator to give the sword swing a duration of 0.15s so swing feedback feels responsive. \n\nTo make the shurikens, a prefab was created and instantiated with a base velocity upon user input. Shurikens do have both physics and collision, initially we wanted them to exist endlessly for a fun little visual but, this affected the performance negatively and so we added a lifespan to each shuriken and reduced their intitial velocity so the throw distance was shorter. This way players can still see the cool physics collisions of the shurikens while not hindering performance.",]
     },
     {
       id: "Pick-Your-Poison", content: './thumbnails/PYP.png', 
@@ -108,12 +114,15 @@
       engine: "Godot",
       team: "4",
       page: "https://mamemor.itch.io/pick-your-poison",
-      desc: "A survival taste-testing game where players must test dishes for poison before serving them. Tasting a dish will reveal ingredients on a one-per bite basis, players must must control their bites to avoid eating poison, and tasting too much before serving.", 
+      desc: "Pick Your Poison is a survival taste-testing game where players must test dishes for poison before serving them. During each playthrough, players are served random food items which they must 'taste' using an event bar timing meter. Tasting a dish will reveal ingredients on a one-per bite basis, players must must control their bites to avoid eating poison, and tasting too much before serving.", 
       video: "https://github.com/Mame-Mor-M/Mame-Mor-Site/releases/download/PortfolioVids/PYPGameplay.mp4",
       gallery: ["/Thumbnails/BusRush.png", "/Thumbnails/BusRush.png", "/Thumbnails/BusRush.png", "/Thumbnails/BusRush.png"],
       systemImage: ["/Thumbnails/BusRush.png", "/Thumbnails/BusRush.png", "/Thumbnails/BusRush.png"],
-      systemName: ["System 1", "System 2", "System 3"],
-      systemDesc: ["BUS RUSH BUS AND RUSHING", "BUS RUSH BUS AND RUSHING", "BUS RUSH BUS AND RUSHING"]
+      systemVideo: [""],
+      systemLink: ["https://github.com/Mame-Mor-M/PickYourPoison/tree/main/pick-your-poison",""],
+      systemName: ["Tasting Dishes",],
+      systemDesc: ["/~Tasting~/From the selection process to passing or categorizing food as poison, everything is connected. Food selection is done with a simple on_mouse_hover & click over the meal which counts as a 'bite'. When this is done, a function call is made to the bite timer packaged with the selected food items name and the # of bites taken (limit of 3)./~Godot Signals for Bites~/When a bite is well timed (cursor is within the green marker) a 'PASS' signal is sent to the ingredient menu script, again packaged with the food items name. For gameplay variability, the green marker is positioned randomly along the timing bar within a preset range. When the 'PASS' signal is received a function call is made to display ingredients corresponding to that food item by searching through a dictionary for the matching foods key (name), then, depending on stored bite count (per food item), an ingredient will be displayed on the left side of the screen. Foods were created in the structure:\n\n'food_name': ['Ingredient_1', 'Ingredient_2', 'Ingredient_3', int bite_count]\n\nand stored in a dictionary in the same format. Using polymorphism here made it a lot easier to add or remove food items, so the game is very scaleable there. For better performance, all food items & assets are preloaded offscreen and animated into player view when needed.", 
+,]
     },
     {
       id: "Upperdut", 
@@ -126,9 +135,13 @@
       desc: "A unique take on the platform fighter genre, Upperdut is a 2-player game where instead of fighting each other, players work together! Conquer the heights of the gym as you work your way up to the top.", 
       video: "https://github.com/Mame-Mor-M/Mame-Mor-Site/releases/download/PortfolioVids/Upperdut.mp4",
       gallery: ["/Thumbnails/BusRush.png", "/Thumbnails/BusRush.png", "/Thumbnails/BusRush.png", "/Thumbnails/BusRush.png"],
-      systemImage: ["/Thumbnails/BusRush.png", "/Thumbnails/BusRush.png", "/Thumbnails/BusRush.png"],
-      systemName: ["System 1", "System 2", "System 3"],
-      systemDesc: ["BUS RUSH BUS AND RUSHING", "BUS RUSH BUS AND RUSHING", "BUS RUSH BUS AND RUSHING"]
+      systemLink: ["https://github.com/Mame-Mor-M/Upperdut/blob/main/upperdut/Scripts/player_movement.gd","https://github.com/Mame-Mor-M/Upperdut/blob/main/upperdut/Scripts/player_hurtbox.gd"],
+      systemImage: ["/Images/upperdutInspector.png", "/Images/UpperdutBoxes.png"],
+      systemVideo: ["/projectGifs/UpperdutInspector.mp4",""],
+      systemName: [ "Two-Player Character & Combat Controller", "Hitbox & Hurtbox" ],
+      systemDesc: ["This system implements a shared character controller that supports local two-player gameplay using enum player assignment. /~Player Assignment~/Here is where movement, combat, animation, and interaction logic is handled. An enum defined as PLAYER_TYPE {P1, P2} allows each character instance to be assigned as player 1 or player 2 directly in the inspector. Using an eum allows for one reusable controller for both players and clear ownership of inputs, damage, and interactions. Having a strong separation between player identity and player behaviors scales well when adding mechanics such as the initial setup for a power up system and the general punch mechanics.",
+        "Combat uses a hitbox / hurtbox separation. When a punch is active:\n- Hitbox becomes monitorable\n- Damage and knockback are applied on collision\n- Knockback direction is calculated relative to attacker position\n/~Knockback State & Recovery~/Knockback state temporarily overrides player control. When hit: \n- Player enters a knockback state\n- Velocity gradually lerps toward zero\n- Control is restored after a short duration"
+      ]
     },
     {
       id: "Othello", 
@@ -137,13 +150,54 @@
       role: "Game Programmer & Designer",
       engine: "Eclipse, Java, JavaFX",
       team: "1",
-      page: "https://github.com/Mame-Mor-M/Othello-Java-with-GUI",
-      desc: "A digital recreation of the board game Othello built entirely in Java using JavaFX for the GUI.  this application allows for Human vs. Human, Human vs. CPU, and CPU vs. CPU gameplay.", 
+      page: "https://github.com/Mame-Mor-M/Othello-Java-with-G",
+      desc: "A digital recreation of the board game Othello built entirely in Java using JavaFX for the GUI.  this application allows for Human vs. Human, Human vs. CPU, and CPU vs. CPU gameplay. It was built entirely in Java using JavaFX for the GUI.", 
       video: "https://github.com/Mame-Mor-M/Mame-Mor-Site/releases/download/PortfolioVids/OthelloPlaythrough.mp4",
       gallery: ["/Thumbnails/BusRush.png", "/Thumbnails/BusRush.png", "/Thumbnails/BusRush.png", "/Thumbnails/BusRush.png"],
-      systemImage: ["/Thumbnails/BusRush.png", "/Thumbnails/BusRush.png", "/Thumbnails/BusRush.png"],
-      systemName: ["System 1", "System 2", "System 3"],
-      systemDesc: ["BUS RUSH BUS AND RUSHING", "BUS RUSH BUS AND RUSHING", "BUS RUSH BUS AND RUSHING"]
+      systemImage: ["/Thumbnails/BusRush.png",],
+      systemVideo: ["/projectGifs/UpperdutInspector.mp4"],
+      systemLink: ["https://github.com/Mame-Mor-M/Othello-Java-with-GUI/blob/main/OthelloGUIApplication/src/ca/yorku/eecs3311/othello/viewcontroller/OthelloApplication.java"],
+      systemName: ["JavaFX GUI", ],
+      systemDesc: ["The GUI features dropdown menus for selecting player strategies (Human, Greedy CPU, or Random CPU), clickable and coordinate-based move inputs, and fully interactive turn handling. Additional functionality includes the ability to save and load games using file I/O, restart games, and maintain a turn-by-turn move history allowing for user to undo/redo game states./~Explained code in detail in the above video~/", 
+        ,]
+    },
+
+    {
+      id: "Post-Guardian",
+      content: './thumbnails/PostGuardian.jpg',
+      name: "Post Guardian",
+      role: "Full-Stack | UI Design",
+      engine: "Javascript, Python, Flask",
+      team: "3",
+      page: "https://github.com/Mame-Mor-M/Othello-Java-with-G",
+      desc: "Post Guardian is a google chrome extension which overlays social media platforms and highlights words/phrases which users are suggested to not post. Post Guardian also acts as a tool for videos whether they are livestreamed or pre-recorded, scanning through them and pointing out/hiding any inappropriate content depending on the context of the users video.\n\nPost guardian overlays the Twitter DOM and underlines potential risky phrases, these phrases are retrieved from the Tweetbox html content sent through to Gemini using their API and fed back, giving you their risk type, why they are risky, and how you can rephrase them. Integration with an extension had its challenges because of Node.js not being compatible so we had to directly fetch endpoints instead of importing packages regularly.\n\nAs for TwelveLabs integration, since we were working with a chrome extension, initial integration was difficult because with Chrome extensions you can’t use nodejs so fetching APIs can get pretty iffy.Had to fetch endpoints manually., our approach was similar to how we integrated other APIs which was directly in the background js script with event listeners and fetch requests to the APIs.We found this to be incredibly inefficient and mostly non- functional with TwelveLabs, so we instead ran a python flask backend with our chrome extension.This backend would receive calls when the event listener was activated from uploading(and intercepting) a video.Using a flask server allowed us to upload videos without worry of local computing power affecting the extensions performance, it also centralized all requests making it easier to work around the different functions of Twelvelabs.We used the task and search endpoints to pinpoint the start and end timestamps for 'risky' clips.",
+      video: "https://github.com/Mame-Mor-M/Mame-Mor-Site/releases/download/PortfolioVids/PostGuardian.mp4",
+      gallery: ["/Thumbnails/BusRush.png", "/Thumbnails/BusRush.png", "/Thumbnails/BusRush.png", "/Thumbnails/BusRush.png"],
+      systemImage: ["/Images/PGPy.png"],
+      systemVideo: [""],
+      systemLink: ["https://github.com/ReeeGeXx/PostGuardian/blob/dev/TwitterVideoIntercept/show_analysis.py"],
+      systemName: ["Extension complications W/ SDKs",],
+      systemDesc: ["/~Incompatibility W/ NodeJS~/Initial integration with our Chrome extension came with a few complications, one being that NodeJS is not supported by Chrome extensions, so we could not use backend SDKs regularly or npm packages.Second, we noticed that when we initially used TwelveLabs by manually accessing endpoints with event listeners and fetch calls, there was a lot of performance overhead. Large videos would fail to upload and the entire process was very inefficient.\n\nThis lead to us using a Python Flask server as a middleware between the extension and Twelvelabs.This backend allowed us to handle API calls centrally and made the whole process much more efficient.In connection with the extension, using the upload video event to call the server was a much simpler and more modular approach.This also made the authentication, task lifecycle(uploading, indexing, and searching) much easier to work with.",
+        ,]
+    },
+
+    {
+      id: "Pulsefex",
+      content: './thumbnails/Pulsefex.jpg',
+      name: "Othello",
+      role: "Game Programmer & Designer",
+      engine: "C, STM32CubeIDE",
+      team: "5",
+      page: "https://github.com/Pulsefex/stm32-max30102",
+    desc: "Pulsefex is an embedded systems project that captures and displays real-time heart rate and SpO2 levels. The system is built on the STM32WB55RG MCU and interfaces with the MAX30102 pulse oximeter and TMP102 temperature sensor, with real-time data output to an SSD1306 OLED screen. This was my first embedded systems project and as such I was eager to contribute.\n\nMy primary responsibility was the low-level interfacing of the MAX30102 with the STM32WB MCU via I²C, implemented entirely in C. I developed custom drivers to extract photoplethysmography (PPG) signals, which the sensor uses to detect pulse and blood oxygen saturation through infrared light reflectance. ",
+      video: "https://github.com/Mame-Mor-M/Mame-Mor-Site/releases/download/PortfolioVids/Pulsefex.mp4",
+      gallery: ["/Thumbnails/BusRush.png", "/Thumbnails/BusRush.png", "/Thumbnails/BusRush.png", "/Thumbnails/BusRush.png"],
+      systemImage: ["/Thumbnails/Pulsefex.jpg",],
+      systemVideo: [""],
+      systemLink: ["https://github.com/Pulsefex/stm32-max30102/blob/main/max30102.c"],
+      systemName: ["MAX30102 Sensor",],
+      systemDesc: ["/~Polling Rate Adjustments~/To minimize MCU workload and optimize data flow, I enabled the MAX30102’s 32-sample FIFO buffer, allowing efficient batch data reads rather than continuous polling. \n\nInterrupt pins on the MAX30102 were configured to trigger data reads only when meaningful data was available.To ensure signal accuracy, I implemented Active Light Cancellation(ALC) and a sample buffer to filter noise from ambient light sources to provide more reliable BPM readings. \n\nThe STM32CubeIDE was used to configure system clocks, peripheral pins, and I²C communication while manually handling low- level register manipulation and timing for precise control.",
+        ,]
     },
 ]
 

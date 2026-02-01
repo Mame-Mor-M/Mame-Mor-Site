@@ -9,20 +9,20 @@ import { Link } from 'react-router-dom';
 
 function Home() {
   const game_thumbnails = [
-    {id:"Bus-Rush", content: './thumbnails/BusRush.png', name: "Bus Rush", desc: "A time-based arcade racing game where players must reach the final stop while picking up as many passengers as possible. The game grades players on punctuality and passenger count, with performance bonuses tied to how fast they complete their route, and how little damage their vehicle sustains.", video: "https://github.com/Mame-Mor-M/Mbong-Art-Portfolio/releases/download/Animation/Flux_Intro.mp4"},
-    { id: "Citizen-Jane", content: './thumbnails/CitizenJane.png', name: "Citizen Jane", desc: "Play as private investigator Jane, and  solve a high profile murder. Traverse through comic panels and obtain clues,  and combine them to solve the mystery.", video: "https://github.com/Mame-Mor-M/Mbong-Art-Portfolio/releases/download/Animation/Flux_Intro.mp4" },
-    { id: "Endzone", content: './thumbnails/Endzone.png', name: "Endzone", desc: "An arcade style sports survival game. Avoid opposing defenders in each region of the football field and reach the opponents end zone to win the game.", video: "https://github.com/Mame-Mor-M/Mbong-Art-Portfolio/releases/download/Animation/Flux_Intro.mp4" },
-    { id: "Flipped-Out", content: './thumbnails/FlippedOut.jpg', name: "Flipped Out", desc: "A fast-paced mobile memory matching game with both solo and competitive play, player trophies, and a global leaderboard", video: "https://github.com/Mame-Mor-M/Mbong-Art-Portfolio/releases/download/Animation/Flux_Intro.mp4" },
-    { id: "Moonlight-Paws", content: './thumbnails/MoonlightPaws.png', name: "Moonlight Paws", desc: "A puzzle-based narrative experience focused on shape recognition and spatial navigation. Each level presents a hint describing a specific shape. Players must read the hint carefully, choose a direction to move, and explore the space to find the correct match.", video: "https://github.com/Mame-Mor-M/Mbong-Art-Portfolio/releases/download/Animation/Flux_Intro.mp4" },
-    { id: "Neon-Vendetta", content: './thumbnails/NeonVendetta.png', name: "Neon Vendetta", desc: "Experience a 2D cyberpunk action platformer heavily inspired by SpeedRunners, and Vector. Each level introduces new twists on mechanics from intense boss fights to platformer minigames.", video: "https://github.com/Mame-Mor-M/Mbong-Art-Portfolio/releases/download/Animation/Flux_Intro.mp4" },
-    { id: "Pick-Your-Poison", content: './thumbnails/PYP.png', name: "Pick Your Poison", desc: "A survival taste-testing game where players must test dishes for poison before serving them. Tasting a dish will reveal ingredients on a one-per bite basis, players must must control their bites to avoid eating poison, and tasting too much before serving.", video: "https://github.com/Mame-Mor-M/Mbong-Art-Portfolio/releases/download/Animation/Flux_Intro.mp4" },
-    { id: "Upperdut", content: './thumbnails/Upperdut.png', name: "Upperdut", desc: "A unique take on the platform fighter genre, Upperdut is a 2-player game where instead of fighting each other, players work together! Conquer the heights of the gym as you work your way up to the top.", video: "https://github.com/Mame-Mor-M/Mbong-Art-Portfolio/releases/download/Animation/Flux_Intro.mp4" },
-    { id: "Othello", content: './thumbnails/Othello.png', name: "Othello", desc: "A digital recreation of the board game Othello built entirely in Java using JavaFX for the GUI.  this application allows for Human vs. Human, Human vs. CPU, and CPU vs. CPU gameplay.", video: "https://github.com/Mame-Mor-M/Mbong-Art-Portfolio/releases/download/Animation/Flux_Intro.mp4" },
+    { id: "Bus-Rush", content: './thumbnails/BusRush.png', name: "Bus Rush", desc: "A time-based arcade racing game where players must reach the final stop while picking up as many passengers as possible. The game grades players on punctuality and passenger count, with performance bonuses tied to how fast they complete their route, and how little damage their vehicle sustains.", video: "https://github.com/Mame-Mor-M/Mame-Mor-Site/releases/download/PortfolioVids/BusRush.mp4"},
+    { id: "Citizen-Jane", content: './thumbnails/CitizenJane.png', name: "Citizen Jane", desc: "Play as private investigator Jane, and  solve a high profile murder. Traverse through comic panels and obtain clues,  and combine them to solve the mystery.", video: "https://github.com/Mame-Mor-M/Mame-Mor-Site/releases/download/PortfolioVids/CitizenJane.mp4" },
+    { id: "Endzone", content: './thumbnails/Endzone.png', name: "Endzone", desc: "An arcade style sports survival game. Avoid opposing defenders in each region of the football field and reach the opponents end zone to win the game.", video: "https://github.com/Mame-Mor-M/Mame-Mor-Site/releases/download/PortfolioVids/EndzoneGameplay.mp4" },
+    { id: "Flipped-Out", content: './thumbnails/FlippedOut.jpg', name: "Flipped Out", desc: "A fast-paced mobile memory matching game with both solo and competitive play, player trophies, and a global leaderboard", video: "https://github.com/Mame-Mor-M/Mame-Mor-Site/releases/download/PortfolioVids/FlippedShort.mp4" },
+    { id: "Moonlight-Paws", content: './thumbnails/MoonlightPaws.png', name: "Moonlight Paws", desc: "A puzzle-based narrative experience focused on shape recognition and spatial navigation. Each level presents a hint describing a specific shape. Players must read the hint carefully, choose a direction to move, and explore the space to find the correct match.", video: "https://github.com/Mame-Mor-M/Mame-Mor-Site/releases/download/PortfolioVids/MoonShort.mp4" },
+    { id: "Neon-Vendetta", content: './thumbnails/NeonVendetta.png', name: "Neon Vendetta", desc: "Experience a 2D cyberpunk action platformer heavily inspired by SpeedRunners, and Vector. Each level introduces new twists on mechanics from intense boss fights to platformer minigames.", video: "https://github.com/Mame-Mor-M/Mame-Mor-Site/releases/download/PortfolioVids/NeonShort.mp4" },
+    { id: "Pick-Your-Poison", content: './thumbnails/PYP.png', name: "Pick Your Poison", desc: "A survival taste-testing game where players must test dishes for poison before serving them. Tasting a dish will reveal ingredients on a one-per bite basis, players must must control their bites to avoid eating poison, and tasting too much before serving.", video: "https://github.com/Mame-Mor-M/Mame-Mor-Site/releases/download/PortfolioVids/PYPShort.mp4" },
+    { id: "Upperdut", content: './thumbnails/Upperdut.png', name: "Upperdut", desc: "A unique take on the platform fighter genre, Upperdut is a 2-player game where instead of fighting each other, players work together! Conquer the heights of the gym as you work your way up to the top.", video: "https://github.com/Mame-Mor-M/Mame-Mor-Site/releases/download/PortfolioVids/UpperdutShort.mp4" },
+    { id: "Othello", content: './thumbnails/Othello.png', name: "Othello", desc: "A digital recreation of the board game Othello built entirely in Java using JavaFX for the GUI.  this application allows for Human vs. Human, Human vs. CPU, and CPU vs. CPU gameplay.", video: "https://github.com/Mame-Mor-M/Mame-Mor-Site/releases/download/PortfolioVids/OthelloPlaythrough.mp4" },
   ]
 
   const project_thumbnails = [
-    { content: './thumbnails/PostGuardian.jpg', name: "Post Guardian", desc: "A Chrome extension which overlays social media platforms and highlights words/phrases which users are suggested to not post. Post Guardian also gives an analysis on uploaded videos to provide feedback on timestamps that may be inappropriate to post", video: "https://github.com/Mame-Mor-M/Mbong-Art-Portfolio/releases/download/Animation/Flux_Intro.mp4" },
-    { content: './thumbnails/Pulsefex.jpg', name: "Bus Rush", desc: "Chaotic bus driving simulator", video: "https://github.com/Mame-Mor-M/Mbong-Art-Portfolio/releases/download/Animation/Flux_Intro.mp4" },
+    { id: "Post-Guardian", content: './thumbnails/PostGuardian.jpg', name: "Post Guardian", desc: "A Chrome extension which overlays social media platforms and highlights words/phrases which users are suggested to not post. Post Guardian also gives an analysis on uploaded videos to provide feedback on timestamps that may be inappropriate to post", video: "https://github.com/Mame-Mor-M/Mbong-Art-Portfolio/releases/download/Animation/Flux_Intro.mp4" },
+    { id: "Pulsefex", content: './thumbnails/Pulsefex.jpg', name: "Pulsefex", desc: "An embedded systems project that captures and displays real-time heart rate and SpO2 levels. The system is built on the STM32WB55RG MCU and interfaces with the MAX30102 pulse oximeter and TMP102 temperature sensor, with real-time data output to an SSD1306 OLED screen.", video: "https://github.com/Mame-Mor-M/Mbong-Art-Portfolio/releases/download/Animation/Flux_Intro.mp4" },
     { content: 'thumbnails/MbongSite.png', name: "Artist Portfolio Website", desc: "", video: "https://github.com/Mame-Mor-M/Mbong-Art-Portfolio/releases/download/Animation/Flux_Intro.mp4" }
   ]
 
@@ -113,9 +113,10 @@ function Home() {
           Other Projects
           <p className='Section-Desc'>Non-game projects</p>
         </header>
-        <ResponsiveMasonry columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 3 }}>
+        <ResponsiveMasonry columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 3, 2000: 4, 2500: 5, 3000: 7, 3500: 10}}>
           <Masonry columnsCount={3} gutter="16px">
             {project_thumbnails.map((image, i) => (
+              <Link key={image.id} to={`/projects/${image.id}`}>
               <div
                 key={i}
                 className="Projects-item"
@@ -148,7 +149,8 @@ function Home() {
                   <p>{image.desc}</p>
                 </div>
               </div>
-            ))}
+              </Link>))}
+            
           </Masonry>
         </ResponsiveMasonry>
       </div>
