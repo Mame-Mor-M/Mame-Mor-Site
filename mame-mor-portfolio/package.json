@@ -1,6 +1,6 @@
 {
   "name": "mame-mor-portfolio",
-  "homepage": "https://Mame-Mor-M.github.io/Mame-Mor-Site",
+  "homepage": ".",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
