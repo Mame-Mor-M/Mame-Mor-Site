@@ -116,7 +116,7 @@
       engine: "Flutter, Firebase",
       team: "3",
       page: "https://github.com/jasminSlootweg/flipped_out",
-      desc: "A fast-paced mobile memory matching game with both solo and competitive play, player trophies, and a global leaderboard",
+      desc: "Flipped out is a mobile memory matching game with both solo and competitive play, player trophies, and a global leaderboard. Solo matches can be played endlessly at a difficulty of the players choosing where difficulty determines grid size. Points distributed at the end of each round in solo play depends on the time taken to match all shapes. Online play only runs for one round, it has a medium difficulty board size and provides a different set of stats which are visible on the competitive leaderboard.",
       video: "https://github.com/Mame-Mor-M/Mame-Mor-Site/releases/download/PortfolioVids/FlippedOut.Demo.mp4",
       gallery: [`${process.env.PUBLIC_URL}/Images/Flipped1.jpg`, `${process.env.PUBLIC_URL}/Images/Flipped2.jpg`, `${process.env.PUBLIC_URL}/Images/Flipped4.jpg`, `${process.env.PUBLIC_URL}/Images/Flipped5.jpg`, `${process.env.PUBLIC_URL}/Images/Flipped6.jpg`, `${process.env.PUBLIC_URL}/Images/Flipped8.jpg`, `${process.env.PUBLIC_URL}/Images/Flipped9.jpg`, `${process.env.PUBLIC_URL}/Images/Flipped10.jpg`, `${process.env.PUBLIC_URL}/Images/Flipped11.jpg`, `${process.env.PUBLIC_URL}/Images/Flipped12.jpg`],
       systemImage: [`${process.env.PUBLIC_URL}/Images/Flipped3.jpg`, `${process.env.PUBLIC_URL}/Images/FlippedOnline.jpg`, `${process.env.PUBLIC_URL}/Images/FlippedBoard.jpg`],
