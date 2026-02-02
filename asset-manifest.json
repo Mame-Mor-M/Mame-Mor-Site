@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Mame-Mor-Site/static/css/main.65963a08.css",
+    "main.js": "/Mame-Mor-Site/static/js/main.41540482.js",
+    "static/js/453.5f141192.chunk.js": "/Mame-Mor-Site/static/js/453.5f141192.chunk.js",
+    "index.html": "/Mame-Mor-Site/index.html",
+    "main.65963a08.css.map": "/Mame-Mor-Site/static/css/main.65963a08.css.map",
+    "main.41540482.js.map": "/Mame-Mor-Site/static/js/main.41540482.js.map",
+    "453.5f141192.chunk.js.map": "/Mame-Mor-Site/static/js/453.5f141192.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.65963a08.css",
+    "static/js/main.41540482.js"
+  ]
+}
