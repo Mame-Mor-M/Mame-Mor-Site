@@ -138,7 +138,7 @@
       desc: "Neon Vendetta is a fast-paced, 2D cyberpunk action platformer heavily inspired by Mirror’s Edge, SpeedRunners, and Vector. The game fuses fluid parkour movement with runner-style gameplay and action-RPG elements. Each level introduces new twists on mechanics from intense boss fights to platformer minigames styled after Jump King. The goal was to build a game that felt alive in its movement, responsive in its controls, and stylish in its execution.",
       video: "https://github.com/Mame-Mor-M/Mame-Mor-Site/releases/download/PortfolioVids/NeonVendetta.Walkthrough.2.mp4",
       gallery: [`${process.env.PUBLIC_URL}/Images/NeonL1.png`, `${process.env.PUBLIC_URL}/Images/NeonL2.png`, `${process.env.PUBLIC_URL}/Images/NeonBoss.png`, `${process.env.PUBLIC_URL}/Images/NeonThumbnail.png`],
-      systemImage: [`${process.env.PUBLIC_URL}/Thumbnails/BusRush.png`, `${process.env.PUBLIC_URL}/Thumbnails/BusRush.png`, `${process.env.PUBLIC_URL}/Thumbnails/BusRush.png`],
+      systemImage: [`${process.env.PUBLIC_URL}/Images/NeonMove.png`, `${process.env.PUBLIC_URL}/Images/NeonCombat.png`, `${process.env.PUBLIC_URL}/Thumbnails/BusRush.png`],
       systemVideo: [""],
       systemLink: ["https://github.com/Mame-Mor-M/Parkour-Platformer/blob/main/Assets/Scripts/PlayerMovement.cs", "https://github.com/Mame-Mor-M/Parkour-Platformer/blob/main/Assets/Scripts/ProjectileScript.cs"],
       systemName: ["Movement Controller", "Combat System"],
