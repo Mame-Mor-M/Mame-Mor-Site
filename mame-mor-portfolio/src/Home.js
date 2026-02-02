@@ -21,8 +21,8 @@ function Home() {
   ]
 
   const project_thumbnails = [
-    {id: "Post-Guardian", content: `${process.env.PUBLIC_URL}/Thumbnails/PostGuardian.jpg`, name: "Post Guardian", desc: "A Chrome extension which overlays social media platforms and highlights words/phrases which users are suggested to not post. Post Guardian also gives an analysis on uploaded videos to provide feedback on timestamps that may be inappropriate to post", video: "https://github.com/Mame-Mor-M/Mbong-Art-Portfolio/releases/download/Animation/Flux_Intro.mp4", tech: [SiJavascript]},
-    {id: "Pulsefex", content: `${process.env.PUBLIC_URL}/Thumbnails/Pulsefex.jpg`, name: "Pulsefex", desc: "An embedded systems project that captures and displays real-time heart rate and SpO2 levels. The system is built on the STM32WB55RG MCU and interfaces with the MAX30102 pulse oximeter and TMP102 temperature sensor, with real-time data output to an SSD1306 OLED screen.", video: "https://github.com/Mame-Mor-M/Mbong-Art-Portfolio/releases/download/Animation/Flux_Intro.mp4", tech: [PiFileC, SiStmicroelectronics] },
+    { id: "Post-Guardian", content: `${process.env.PUBLIC_URL}/Thumbnails/PostGuardian.jpg`, name: "Post Guardian", desc: "A Chrome extension which overlays social media platforms and highlights words/phrases which users are suggested to not post. Post Guardian also gives an analysis on uploaded videos to provide feedback on timestamps that may be inappropriate to post", video: "https://github.com/Mame-Mor-M/Mame-Mor-Site/releases/download/PortfolioVids/PostGuardian.mp4", tech: [SiJavascript]},
+    { id: "Pulsefex", content: `${process.env.PUBLIC_URL}/Thumbnails/Pulsefex.jpg`, name: "Pulsefex", desc: "An embedded systems project that captures and displays real-time heart rate and SpO2 levels. The system is built on the STM32WB55RG MCU and interfaces with the MAX30102 pulse oximeter and TMP102 temperature sensor, with real-time data output to an SSD1306 OLED screen.", video: "https://github.com/Mame-Mor-M/Mame-Mor-Site/releases/download/PortfolioVids/Pulsefex.mp4", tech: [PiFileC, SiStmicroelectronics] },
   ]
   
   const web_thumbnails = [
