@@ -4,9 +4,9 @@ import ProjectPage from './GamePage';
 
 function App() {
     return (
-        <Router>
+        <Router >
             <Routes>
-                <Route path="" element={<Home />} />
+                <Route path="/" element={<Home />} />
                 <Route path="/blog" element={<Home />} />
                 <Route path="/projects/:id" element={<ProjectPage />} />
             </Routes>
