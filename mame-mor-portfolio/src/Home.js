@@ -1,5 +1,5 @@
 import { FaGithub,FaItchIo, FaLinkedin, FaEnvelope, FaUnity, FaJava, FaReact, FaPython , FaFigma,} from 'react-icons/fa';
-import { SiBlender, SiGodotengine, SiJavascript, SiMysql, SiC, SiFlutter, SiAndroidstudio, SiFmod, SiFirebase, SiMongodb  } from "react-icons/si";
+import { SiBlender, SiGodotengine, SiJavascript, SiMysql, SiC, SiFlutter, SiAndroidstudio, SiFmod, SiFirebase, SiMongodb, SiStmicroelectronics  } from "react-icons/si";
 import { PiFileCpp, PiFileSql, PiFileC, PiFileCSharp} from "react-icons/pi"
 import { useState, useEffect, useRef } from 'react';
 import Masonry, { ResponsiveMasonry } from 'react-responsive-masonry';
@@ -21,13 +21,13 @@ function Home() {
   ]
 
   const project_thumbnails = [
-    {id: "Post-Guardian", content: `${process.env.PUBLIC_URL}/Thumbnails/PostGuardian.jpg`, name: "Post Guardian", desc: "A Chrome extension which overlays social media platforms and highlights words/phrases which users are suggested to not post. Post Guardian also gives an analysis on uploaded videos to provide feedback on timestamps that may be inappropriate to post", video: "https://github.com/Mame-Mor-M/Mbong-Art-Portfolio/releases/download/Animation/Flux_Intro.mp4" },
-    {id: "Pulsefex", content: `${process.env.PUBLIC_URL}/Thumbnails/Pulsefex.jpg`, name: "Pulsefex", desc: "An embedded systems project that captures and displays real-time heart rate and SpO2 levels. The system is built on the STM32WB55RG MCU and interfaces with the MAX30102 pulse oximeter and TMP102 temperature sensor, with real-time data output to an SSD1306 OLED screen.", video: "https://github.com/Mame-Mor-M/Mbong-Art-Portfolio/releases/download/Animation/Flux_Intro.mp4" },
+    {id: "Post-Guardian", content: `${process.env.PUBLIC_URL}/Thumbnails/PostGuardian.jpg`, name: "Post Guardian", desc: "A Chrome extension which overlays social media platforms and highlights words/phrases which users are suggested to not post. Post Guardian also gives an analysis on uploaded videos to provide feedback on timestamps that may be inappropriate to post", video: "https://github.com/Mame-Mor-M/Mbong-Art-Portfolio/releases/download/Animation/Flux_Intro.mp4", tech: [SiJavascript]},
+    {id: "Pulsefex", content: `${process.env.PUBLIC_URL}/Thumbnails/Pulsefex.jpg`, name: "Pulsefex", desc: "An embedded systems project that captures and displays real-time heart rate and SpO2 levels. The system is built on the STM32WB55RG MCU and interfaces with the MAX30102 pulse oximeter and TMP102 temperature sensor, with real-time data output to an SSD1306 OLED screen.", video: "https://github.com/Mame-Mor-M/Mbong-Art-Portfolio/releases/download/Animation/Flux_Intro.mp4", tech: [PiFileC, SiStmicroelectronics] },
   ]
   
   const web_thumbnails = [
     {
-      content: `${process.env.PUBLIC_URL}Thumbnails/MbongSite.png`, name: "Artist Portfolio Website", link: "https://mbongmbong.com/", video: "https://github.com/Mame-Mor-M/Mbong-Art-Portfolio/releases/download/Animation/Flux_Intro.mp4" }
+      content: `${process.env.PUBLIC_URL}/Thumbnails/MbongSite.png`, name: "Artist Portfolio Website", link: "https://mbongmbong.com/", video: "https://github.com/Mame-Mor-M/Mbong-Art-Portfolio/releases/download/Animation/Flux_Intro.mp4", tech: [FaFigma, FaReact] }
   ]
 
   return (
@@ -156,8 +156,12 @@ function Home() {
                     playsInline
                     preload="metadata"
                   />
+                    <div className="TechStack">
+                      {image.tech?.map((Icon, i) => (
+                        <Icon className="TechStack-Icon " key={i} />
+                      ))}
+                    </div>
                 </div>
-
                 <div className="Overlay">
                   <h3>{image.name}</h3>
                   <p>{image.desc}</p>
@@ -183,6 +187,11 @@ function Home() {
                 >
                   <div className="Media">
                     <img src={image.content} alt={image.name} />
+                    <div className="TechStack">
+                      {image.tech?.map((Icon, i) => (
+                        <Icon className="TechStack-Icon " key={i} />
+                      ))}
+                    </div>
                   </div>
 
                   <div className="Overlay">
