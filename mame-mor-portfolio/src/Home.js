@@ -1,5 +1,5 @@
-import { FaGithub,FaItchIo, FaLinkedin, FaEnvelope, FaUnity, FaJava, FaReact, FaPython , FaFigma} from 'react-icons/fa';
-import { SiBlender, SiGodotengine, SiJavascript, SiMysql, SiC, SiFlutter, SiAndroidstudio, SiFmod,   } from "react-icons/si";
+import { FaGithub,FaItchIo, FaLinkedin, FaEnvelope, FaUnity, FaJava, FaReact, FaPython , FaFigma,} from 'react-icons/fa';
+import { SiBlender, SiGodotengine, SiJavascript, SiMysql, SiC, SiFlutter, SiAndroidstudio, SiFmod, SiFirebase, SiMongodb  } from "react-icons/si";
 import { PiFileCpp, PiFileSql, PiFileC, PiFileCSharp} from "react-icons/pi"
 import { useState, useEffect, useRef } from 'react';
 import Masonry, { ResponsiveMasonry } from 'react-responsive-masonry';
@@ -9,21 +9,24 @@ import { Link } from 'react-router-dom';
 
 function Home() {
   const game_thumbnails = [
-    { id: "Bus-Rush", content: './thumbnails/BusRush.png', name: "Bus Rush", desc: "A time-based arcade racing game where players must reach the final stop while picking up as many passengers as possible. The game grades players on punctuality and passenger count, with performance bonuses tied to how fast they complete their route, and how little damage their vehicle sustains.", video: "https://github.com/Mame-Mor-M/Mame-Mor-Site/releases/download/PortfolioVids/BusRush.mp4"},
-    { id: "Citizen-Jane", content: './thumbnails/CitizenJane.png', name: "Citizen Jane", desc: "Play as private investigator Jane, and  solve a high profile murder. Traverse through comic panels and obtain clues,  and combine them to solve the mystery.", video: "https://github.com/Mame-Mor-M/Mame-Mor-Site/releases/download/PortfolioVids/CitizenJane.mp4" },
-    { id: "Endzone", content: './thumbnails/Endzone.png', name: "Endzone", desc: "An arcade style sports survival game. Avoid opposing defenders in each region of the football field and reach the opponents end zone to win the game.", video: "https://github.com/Mame-Mor-M/Mame-Mor-Site/releases/download/PortfolioVids/EndzoneGameplay.mp4" },
-    { id: "Flipped-Out", content: './thumbnails/FlippedOut.jpg', name: "Flipped Out", desc: "A fast-paced mobile memory matching game with both solo and competitive play, player trophies, and a global leaderboard", video: "https://github.com/Mame-Mor-M/Mame-Mor-Site/releases/download/PortfolioVids/FlippedShort.mp4" },
-    { id: "Moonlight-Paws", content: './thumbnails/MoonlightPaws.png', name: "Moonlight Paws", desc: "A puzzle-based narrative experience focused on shape recognition and spatial navigation. Each level presents a hint describing a specific shape. Players must read the hint carefully, choose a direction to move, and explore the space to find the correct match.", video: "https://github.com/Mame-Mor-M/Mame-Mor-Site/releases/download/PortfolioVids/MoonShort.mp4" },
-    { id: "Neon-Vendetta", content: './thumbnails/NeonVendetta.png', name: "Neon Vendetta", desc: "Experience a 2D cyberpunk action platformer heavily inspired by SpeedRunners, and Vector. Each level introduces new twists on mechanics from intense boss fights to platformer minigames.", video: "https://github.com/Mame-Mor-M/Mame-Mor-Site/releases/download/PortfolioVids/NeonShort.mp4" },
-    { id: "Pick-Your-Poison", content: './thumbnails/PYP.png', name: "Pick Your Poison", desc: "A survival taste-testing game where players must test dishes for poison before serving them. Tasting a dish will reveal ingredients on a one-per bite basis, players must must control their bites to avoid eating poison, and tasting too much before serving.", video: "https://github.com/Mame-Mor-M/Mame-Mor-Site/releases/download/PortfolioVids/PYPShort.mp4" },
-    { id: "Upperdut", content: './thumbnails/Upperdut.png', name: "Upperdut", desc: "A unique take on the platform fighter genre, Upperdut is a 2-player game where instead of fighting each other, players work together! Conquer the heights of the gym as you work your way up to the top.", video: "https://github.com/Mame-Mor-M/Mame-Mor-Site/releases/download/PortfolioVids/UpperdutShort.mp4" },
-    { id: "Othello", content: './thumbnails/Othello.png', name: "Othello", desc: "A digital recreation of the board game Othello built entirely in Java using JavaFX for the GUI.  this application allows for Human vs. Human, Human vs. CPU, and CPU vs. CPU gameplay.", video: "https://github.com/Mame-Mor-M/Mame-Mor-Site/releases/download/PortfolioVids/OthelloPlaythrough.mp4" },
+    { id: "Pick-Your-Poison", content: './thumbnails/PYP.png', name: "Pick Your Poison", desc: "A survival taste-testing game where players must test dishes for poison before serving them. Tasting a dish will reveal ingredients on a one-per bite basis, players must must control their bites to avoid eating poison, and tasting too much before serving.", video: "https://github.com/Mame-Mor-M/Mame-Mor-Site/releases/download/PortfolioVids/PYPShort.mp4", tech: [SiGodotengine]  },
+    { id: "Upperdut", content: './thumbnails/Upperdut.png', name: "Upperdut", desc: "A unique take on the platform fighter genre, Upperdut is a 2-player game where instead of fighting each other, players work together! Conquer the heights of the gym as you work your way up to the top.", video: "https://github.com/Mame-Mor-M/Mame-Mor-Site/releases/download/PortfolioVids/UpperdutShort.mp4", tech: [SiGodotengine] },
+    { id: "Neon-Vendetta", content: './thumbnails/NeonVendetta.png', name: "Neon Vendetta", desc: "Experience a 2D cyberpunk action platformer heavily inspired by SpeedRunners, and Vector. Each level introduces new twists on mechanics from intense boss fights to platformer minigames.", video: "https://github.com/Mame-Mor-M/Mame-Mor-Site/releases/download/PortfolioVids/NeonShort.mp4", tech: [FaUnity, PiFileCSharp] },
+    { id: "Bus-Rush", content: './thumbnails/BusRush.png', name: "Bus Rush", desc: "A time-based arcade racing game where players must reach the final stop while picking up as many passengers as possible. The game grades players on punctuality and passenger count, with performance bonuses tied to how fast they complete their route, and how little damage their vehicle sustains.", video: "https://github.com/Mame-Mor-M/Mame-Mor-Site/releases/download/PortfolioVids/BusRush.mp4", tech: [FaUnity, PiFileCSharp, SiBlender] },
+    { id: "Citizen-Jane", content: './thumbnails/CitizenJane.png', name: "Citizen Jane", desc: "Play as private investigator Jane, and  solve a high profile murder. Traverse through comic panels and obtain clues,  and combine them to solve the mystery.", video: "https://github.com/Mame-Mor-M/Mame-Mor-Site/releases/download/PortfolioVids/CitizenJane.mp4", tech: [SiGodotengine] },
+    { id: "Moonlight-Paws", content: './thumbnails/MoonlightPaws.png', name: "Moonlight Paws", desc: "A puzzle-based narrative experience focused on shape recognition and spatial navigation. Each level presents a hint describing a specific shape. Players must read the hint carefully, choose a direction to move, and explore the space to find the correct match.", video: "https://github.com/Mame-Mor-M/Mame-Mor-Site/releases/download/PortfolioVids/MoonShort.mp4", tech: [SiGodotengine] },
+    { id: "Endzone", content: './thumbnails/Endzone.png', name: "Endzone", desc: "An arcade style sports survival game. Avoid opposing defenders in each region of the football field and reach the opponents end zone to win the game.", video: "https://github.com/Mame-Mor-M/Mame-Mor-Site/releases/download/PortfolioVids/EndzoneGameplay.mp4", tech: [] },
+    { id: "Flipped-Out", content: './thumbnails/FlippedOut.jpg', name: "Flipped Out", desc: "A fast-paced mobile memory matching game with both solo and competitive play, player trophies, and a global leaderboard", video: "https://github.com/Mame-Mor-M/Mame-Mor-Site/releases/download/PortfolioVids/FlippedShort.mp4", tech: [SiFlutter, FaFigma, SiFirebase] },
+    { id: "Othello", content: './thumbnails/Othello.png', name: "Othello", desc: "A digital recreation of the board game Othello built entirely in Java using JavaFX for the GUI.  this application allows for Human vs. Human, Human vs. CPU, and CPU vs. CPU gameplay.", video: "https://github.com/Mame-Mor-M/Mame-Mor-Site/releases/download/PortfolioVids/OthelloPlaythrough.mp4", tech: [FaJava]},
   ]
 
   const project_thumbnails = [
     { id: "Post-Guardian", content: './thumbnails/PostGuardian.jpg', name: "Post Guardian", desc: "A Chrome extension which overlays social media platforms and highlights words/phrases which users are suggested to not post. Post Guardian also gives an analysis on uploaded videos to provide feedback on timestamps that may be inappropriate to post", video: "https://github.com/Mame-Mor-M/Mbong-Art-Portfolio/releases/download/Animation/Flux_Intro.mp4" },
     { id: "Pulsefex", content: './thumbnails/Pulsefex.jpg', name: "Pulsefex", desc: "An embedded systems project that captures and displays real-time heart rate and SpO2 levels. The system is built on the STM32WB55RG MCU and interfaces with the MAX30102 pulse oximeter and TMP102 temperature sensor, with real-time data output to an SSD1306 OLED screen.", video: "https://github.com/Mame-Mor-M/Mbong-Art-Portfolio/releases/download/Animation/Flux_Intro.mp4" },
-    { content: 'thumbnails/MbongSite.png', name: "Artist Portfolio Website", desc: "", video: "https://github.com/Mame-Mor-M/Mbong-Art-Portfolio/releases/download/Animation/Flux_Intro.mp4" }
+  ]
+  
+  const web_thumbnails = [
+    { content: 'thumbnails/MbongSite.png', name: "Artist Portfolio Website", link: "https://mbongmbong.com/", video: "https://github.com/Mame-Mor-M/Mbong-Art-Portfolio/releases/download/Animation/Flux_Intro.mp4" }
   ]
 
   return (
@@ -47,8 +50,10 @@ function Home() {
                 className="Projects-item"
                 onMouseEnter={e => {
                   const video = e.currentTarget.querySelector("video");
-
-                  video && video.play();
+                  if (video){
+                    video.play().catch(()=>{});
+                  }
+                  
                 }}
                 onMouseLeave={e => {
                   const video = e.currentTarget.querySelector("video");
@@ -67,6 +72,11 @@ function Home() {
                     playsInline
                     preload="metadata"
                   />
+                    <div className="TechStack">
+                      {image.tech?.map((Icon, i) => (
+                        <Icon className="TechStack-Icon " key={i} />
+                      ))}
+                    </div>
                 </div>
 
                 <div className="Overlay">
@@ -84,23 +94,25 @@ function Home() {
         <h2 className="Stack-Title">Skills</h2>
 
         <div className="Stack-Grid">
-          <FaUnity />
-          <SiBlender/>
-          <SiGodotengine/>
-          <FaPython />
-          <FaJava />
-          <SiJavascript />
-          <FaReact />
-          <PiFileCpp />
-          <SiC />
-          <SiFlutter />
-          <SiAndroidstudio />
-          <FaFigma/>
-          <SiMysql />
-          <PiFileSql/>
-          <SiFmod/>
-          <PiFileC/>
-          <PiFileCSharp/>
+          <FaUnity title="Unity" />
+          <SiBlender title="Blender" />
+          <SiGodotengine title="Godot" />
+          <FaPython title="Python" />
+          <FaJava title="Java" />
+          <SiJavascript title="JavaScript" />
+          <FaReact title="React" />
+          <PiFileCpp title="C++" />
+          <SiC title="C" />
+          <SiFlutter title="Flutter" />
+          <SiAndroidstudio title="Android Studio" />
+          <FaFigma title="Figma" />
+          <SiMysql title="MySQL" />
+          <PiFileSql title="SQL" />
+          <SiFmod title="FMOD" />
+          <PiFileC title="C" />
+          <PiFileCSharp title="C#" />
+          <SiMongodb title="MongoDB" />
+          <SiFirebase title="Firebase" />
         </div>
       </div>
 
@@ -135,6 +147,7 @@ function Home() {
               >
                 <div className="Media">
                   <img src={image.content} alt={image.name} />
+                  
                   <video
                     src={image.video}
                     muted
@@ -151,6 +164,31 @@ function Home() {
               </div>
               </Link>))}
             
+          </Masonry>
+        </ResponsiveMasonry>
+      </div>
+
+      <div className="Projects">
+        <header className="Section-Header" id="WebDesign">
+          Design Projects
+        </header>
+        <ResponsiveMasonry columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 3, 2000: 4, 2500: 5, 3000: 7, 3500: 10 }}>
+          <Masonry columnsCount={3} gutter="16px">
+            {web_thumbnails.map((image, i) => (
+              <a href={image.link} target="_blank" rel="noreferrer">
+              <div 
+                  key={i}
+                  className="Design-item"
+                >
+                  <div className="Media">
+                    <img src={image.content} alt={image.name} />
+                  </div>
+
+                  <div className="Overlay">
+                    <h3>{image.name}</h3>
+                  </div>
+                </div></a>))}
+
           </Masonry>
         </ResponsiveMasonry>
       </div>
@@ -182,9 +220,9 @@ function Home() {
         </div>
       </div>
 
-      <div id="Contact" className="Contact">
+      {/* <div id="Contact" className="Contact">
         <Contact />
-      </div>
+      </div> */}
 
     </div>
   );
@@ -240,9 +278,12 @@ const Navbar = () => {
         <a style={{}} href="https://itch.io/profile/nova-so1" target="_blank" rel="noopener noreferrer">
           <FaItchIo />
         </a>
-        <button style={{}} onClick={() => scrollToSection('Contact')}>
+        <button onClick={() => window.open(
+          "https://mail.google.com/mail/?view=cm&to=mamemormmbacke@gmail.com&su=",
+          "_blank")}><FaEnvelope /></button>
+        {/* <button style={{}} onClick={() => scrollToSection('Contact')}>
           <FaEnvelope />
-        </button>
+        </button> */}
       </div>
     </nav>
   );

@@ -1,6 +1,6 @@
 import { useParams } from 'react-router-dom';
 import { FaGithub, FaItchIo, FaLinkedin, FaEnvelope } from 'react-icons/fa';
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect} from 'react';
 import game_thumbnails from './data.js';
 import Masonry, { ResponsiveMasonry } from 'react-responsive-masonry';
 import "./GamePage.css"
@@ -76,7 +76,7 @@ const GamePage = () => {
                     </section>
                     <section className="Gallery">
                         <h1 className='Section-Header'>GALLERY</h1>
-                        <ResponsiveMasonry columnsCountBreakPoints={{ 350: 1, 600: 2, 900: 3 }}>
+                        <ResponsiveMasonry columnsCountBreakPoints={{ 350: 1, 600: 2, 900: 2, 2000: 4, 2500: 5, 3000: 7, 3500: 10 }}>
                             <Masonry columnsCount={2} gutter='16px'>
                                 {game.gallery?.map((image) => (
                                     <img src={image}></img>

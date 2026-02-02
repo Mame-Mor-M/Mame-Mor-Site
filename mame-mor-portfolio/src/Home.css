@@ -183,14 +183,13 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
     gap: 2.5rem;
-    max-width: 900px;
+    max-width: 80%;
     margin: 0 auto;
     align-items: center;
 }
 
 .Stack-Grid svg {
     font-size: 4rem;
-    color: #000;
     opacity: 0.85;
     transition: transform 0.25s ease, opacity 0.25s ease;
     cursor: default;
@@ -242,9 +241,42 @@
     transform: scale(1.04);
 }
 
+.Design-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 3px;
+    cursor: pointer;
+    transform: scale(1);
+    transition: transform 0.25s ease;
+}
+
+.Design-item:hover {
+    transform: scale(1.04);
+}
+
 .Media {
     position: relative;
     width: 100%;
+}
+
+.TechStack {
+    position: absolute;
+    bottom: 8px;
+    left: 8px;
+    display: flex;
+    gap: 6px;
+    z-index: 3;
+    opacity: 1;
+    transition: opacity 2.45s ease-out;
+}
+
+.TechStack-Icon {
+    min-width: 2rem;
+    height: 100%;
+    color: rgb(255, 255, 255);
+    background: rgba(0, 0, 0, 0.603);
+    padding: 4px;
+    border-radius: 100px;
 }
 
 .Media img,
@@ -270,6 +302,12 @@
     opacity: 0;
 }
 
+.Projects-item:hover .TechStack {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.1s ease-in;
+}
+
 .Overlay {
     position: absolute;
     inset: 0;
@@ -287,6 +325,10 @@
 }
 
 .Projects-item:hover .Overlay {
+    opacity: 1;
+}
+
+.Design-item:hover .Overlay {
     opacity: 1;
 }
 
