@@ -35,24 +35,6 @@ const GamePage = () => {
                     {/* SYSTEM SECTION */}
                     <section className="System">
                         {game.systemName?.map((sys, i) => (
-                            i % 2 == 0 ?
-                                <div>
-                                    <h2 className='System-Header' >{sys}</h2>
-                                    <div className="System-Content">
-                                        {game?.systemImage[i] != "" ? <img src={game?.systemImage[i]} style={{ maxWidth: "700px" }} /> : <video src={game?.systemVideo[i]} style={{ maxWidth: "700px" }} loop autoPlay></video>}
-                                        <div className="System-Text">
-                                            <p>
-                                                {renderDescription(game.systemDesc[i])}
-                                                <br />
-                                                <br />
-                                                <a target="_blank" rel="noreferrer" href={`${game?.systemLink[i]}`}>{game?.systemName[i]} Script on GitHub</a>
-                                            </p>
-                                        </div>
-                                        
-   
-                                    </div>
-                                </div>
-                                :
                                 <div>
                                     <h2 className='System-Header' >{sys}</h2>
                                     <div className="System-Content">
