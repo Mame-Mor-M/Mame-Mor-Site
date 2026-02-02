@@ -106,7 +106,7 @@ const Navbar = () => {
 
     return (
         <nav className={`Navbar ${visible ? 'visible' : 'hidden'}`}>
-            <Link style={{ color: "transparent" }} to={`/Mame-Mor-Site`}>
+            <Link style={{ color: "transparent" }} to={`/`}>
                 <div className="Navbar-Center" onClick={() => scrollToSection('Hero')}>
                     <h1>M.</h1>
                 </div></Link>
