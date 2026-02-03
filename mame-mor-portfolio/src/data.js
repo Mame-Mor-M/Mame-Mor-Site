@@ -100,7 +100,7 @@
       page: "https://nova-so1.itch.io/bus-rush",
       desc: "Bus Rush is a time-based arcade racing game where players must reach the final stop while picking up as many passengers as possible under pressure. As a city bus driver, players face tight schedules, branching route decisions, and crowded traffic, all while managing the chaos of urban transit. The game grades players on punctuality and passenger count, with performance bonuses tied to how well each stop is handled.",
       video: "https://github.com/Mame-Mor-M/Mame-Mor-Site/releases/download/PortfolioVids/BusRush.mp4",
-      gallery: [`/Images/Bus.png`, `/Images/BusCity.png`, `/Images/City.png`],
+      gallery: [`/Images/Bus.png`, `/Images/BusCity.png`, `/Images/City.png`, `/Images/BusRushMap.png`],
       systemImage: [`/Images/BusRushInspector.png`, `/Images/BRPassengers.png`],
       systemVideo: [""],
       systemLink: ["https://github.com/Mame-Mor-M/RacingGameUnity3D/blob/main/Assets/Scripts/BusController.cs", "https://github.com/Mame-Mor-M/RacingGameUnity3D/blob/main/Assets/Scripts/BusStopBehavior.cs"],
