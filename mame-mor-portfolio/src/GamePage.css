@@ -16,11 +16,11 @@
 .Game-Page h2{
     margin: 0rem;
 }
-
 /* HERO */
 .Hero-Media video {
     width: 100%;
-    max-width: 100%;
+    max-height: 50rem;
+    align-self: center;
     height: auto;
     object-fit: cover;
 }
@@ -53,18 +53,20 @@
 
 /* SYSTEM SECTION */
 .System {
-    margin-top: 4rem;
+    margin-top: 3rem;
 }
 
 
 .System h2 {
-    margin-top: 2rem;
+    
     margin-bottom: 1rem;
 }
 
 .System-Content {
     display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 1rem;
+    margin-bottom: -6rem;
 }
 
 .System-Content img {
