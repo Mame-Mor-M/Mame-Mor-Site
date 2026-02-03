@@ -203,36 +203,7 @@ function Home() {
         </ResponsiveMasonry>
       </div>
 
-      <div className="About-Section">
-        <h2 className="About-Title">About Me</h2>
 
-        <div className="About-Grid">
-          {/* Left Content */}
-          <div className="About-Left">
-            <h3 className="About-Name">Mame Mor Mbacke</h3>
-            <p className="About-Role">Programmer & Game Designer</p>
-
-            <div className="About-Description">
-              <p>
-                I'm a fourth year Computer Science student at York University and an aspiring Game Developer. 
-                I've always had an idea that I wanted to pursue game development ever since I was a kid making levels in Roblox Studio, 
-                here my love of video games grew from enjoying gameplay, to enjoying the creation process. 
-                This is what pushed me into the programming space and from there allowed me to learn so much more and grow a new interest in the field of 
-                Computer Science & Game Development.
-              </p>
-            </div>
-          </div>
-
-          {/* Right Image Placeholder */}
-          <div className="About-Right">
-            <img src="./other/MameMorMbacke.jpg" className="About-Image"></img>
-          </div>
-        </div>
-      </div>
-
-      {/* <div id="Contact" className="Contact">
-        <Contact />
-      </div> */}
 
     </div>
   );
