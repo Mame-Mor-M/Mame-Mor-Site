@@ -1,0 +1,60 @@
+.BlogPage {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #000000;
+    padding: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Jersey 25", sans-serif;
+}
+
+.BlogCard {
+    width: 90%;
+    background-color: #1a1919;
+    padding: 2rem;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.BlogTitle {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 0rem;
+    color: #d60000;
+    
+}
+
+.BlogDate {
+    color: #555;
+    font-size: 1.3rem;
+    margin-bottom: 1.7rem;
+    color: #ffffff;
+    
+}
+
+.BlogMediaRow {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.MediaWrapper {
+    flex: 1 1 45%;
+    max-width: 48%;
+}
+
+.BlogMedia {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    background: black;
+}
+
+.BlogSummary {
+    line-height: 1.5;
+    font-size: larger;
+    color: white;
+}

@@ -87,15 +87,17 @@
 .Navbar-Left button,
 .Navbar-Right button,
 .Navbar-Right a {
+    font-family: inherit;
     background: none;
     border: none;
     cursor: pointer;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     font-weight: bold;
     color: #f51414;
     transition: color 0.2s ease-in-out;
     margin-left: 0.7rem;
     vertical-align: middle;
+    text-decoration: none;
 }
 
 

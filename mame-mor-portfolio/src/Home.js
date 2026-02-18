@@ -250,6 +250,8 @@ const Navbar = () => {
       <div className="Navbar-Right">
         <button onClick={() => scrollToSection('Games')}>Games</button>
         <button onClick={() => scrollToSection('Projects')}>Other Projects</button>
+        <Link className="nav-btn" to="/blog">Blog</Link>
+        
         <a style={{}} href="https://github.com/Mame-Mor-M" target="_blank" rel="noopener noreferrer">
           <FaGithub />
         </a>
