@@ -1,17 +1,26 @@
 const blogs = [
 
     {
-        title: 'Tower Defense - Pooling Enemies/Friendlies',
-        date: '02/15/2026',
-        summary: "Strategy games, and specifically those with large quantities of game objects are interesting to make, today, I tried my hand at this. I created an enemy spawning system for a tower defense game. Enemies are 'spawned' in on the gray circle markers after reaching the center triangle and their spawn delay timer is completed. In reality, no spawning or destruction of enemies is done, rather I created an activate/deactivation system to avoid performance issues for longer levels. Upon the level starting a random set of the objects are initialized as civilians under a % chance, and the rest as enemies.",
-        media: [{ type: 'video', src: 'https://github.com/Mame-Mor-M/Mame-Mor-Site/releases/download/PortfolioVids/Mob-Spawning.mp4'}]
+        title: 'Touché Tempo - Early Alpha Build',
+        date: '02/19/2026',
+        summary: "Over the last month, I alongside a team of 5 other students began working on a rhythm game called Touché Tempo. After a month of development much of the core gameplay mechanics are established. Above you can see the current state of the game with two playable levels, an enemy attack feint system, synchronized beat events (to the music), health, win + lose conditions, and visual feedback elements. Right now we are playing around with how forgiving the game should be, a wrong input is currently a guaranteed loss in 'health' (dodges) which may be too challenging on the player.",
+        media: [
+            { type: 'video', src: 'https://github.com/Mame-Mor-M/Mame-Mor-Site/releases/download/PortfolioVids/Vs-Drunkard.mp4' },
+            { type: 'video', src: 'https://github.com/Mame-Mor-M/Mame-Mor-Site/releases/download/PortfolioVids/Vs-Swan.mp4' }
+        ]
     },
-
     {
         title: 'C++ & SFML - Endzone Remake',
         date: '12/15/2025',
         summary: "Today I started playing around with SFML and decided to make a new, up-to-date version of Endzone in C++ (can be found in my projects section). I've made some progress and I can't wait to get this one fully released",
         media: []
+    },
+
+    {
+        title: 'Tower Defense - Pooling Enemies/Friendlies',
+        date: '08/28/2025',
+        summary: "Strategy games, and specifically those with large quantities of game objects are interesting to make, today, I tried my hand at this. I created an enemy spawning system for a tower defense game. Enemies are 'spawned' in on the gray circle markers after reaching the center triangle and their spawn delay timer is completed. In reality, no spawning or destruction of enemies is done, rather I created an activate/deactivation system to avoid performance issues for longer levels. Upon the level starting a random set of the objects are initialized as civilians under a % chance, and the rest as enemies.",
+        media: [{ type: 'video', src: 'https://github.com/Mame-Mor-M/Mame-Mor-Site/releases/download/PortfolioVids/Mob-Spawning.mp4' }]
     },
 
 
