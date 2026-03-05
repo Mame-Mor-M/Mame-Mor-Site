@@ -19,17 +19,15 @@ function Home() {
     {id: "Endzone", content: `${process.env.PUBLIC_URL}/Thumbnails/Endzone.png`, name: "Endzone", desc: "An arcade style sports survival game. Avoid opposing defenders in each region of the football field and reach the opponents end zone to win the game.", video: "https://github.com/Mame-Mor-M/Mame-Mor-Site/releases/download/PortfolioVids/EndzoneGameplay.mp4", tech: [] },
     {id: "Flipped-Out", content: `${process.env.PUBLIC_URL}/Thumbnails/FlippedOut.jpg`, name: "Flipped Out", desc: "A fast-paced mobile memory matching game with both solo and competitive play, player trophies, and a global leaderboard", video: "https://github.com/Mame-Mor-M/Mame-Mor-Site/releases/download/PortfolioVids/FlippedShort.mp4", tech: [SiFlutter, FaFigma, SiFirebase] },
     {id: "Othello", content: `${process.env.PUBLIC_URL}/Thumbnails/Othello.png`, name: "Othello", desc: "A digital recreation of the board game Othello built entirely in Java using JavaFX for the GUI.  this application allows for Human vs. Human, Human vs. CPU, and CPU vs. CPU gameplay.", video: "https://github.com/Mame-Mor-M/Mame-Mor-Site/releases/download/PortfolioVids/OthelloPlaythrough.mp4", tech: [FaJava]},
+    { id: "Post-Guardian", content: `${process.env.PUBLIC_URL}/Thumbnails/PostGuardian.jpg`, name: "Post Guardian", desc: "A Chrome extension which overlays social media platforms and highlights words/phrases which users are suggested to not post. Post Guardian also gives an analysis on uploaded videos to provide feedback on timestamps that may be inappropriate to post", video: "https://github.com/Mame-Mor-M/Mame-Mor-Site/releases/download/PortfolioVids/PostGuardian.mp4", tech: [SiJavascript] },
+    { id: "Pulsefex", content: `${process.env.PUBLIC_URL}/Thumbnails/Pulsefex.jpg`, name: "Pulsefex", desc: "An embedded systems project that captures and displays real-time heart rate and SpO2 levels. The system is built on the STM32WB55RG MCU and interfaces with the MAX30102 pulse oximeter and TMP102 temperature sensor, with real-time data output to an SSD1306 OLED screen.", video: "https://github.com/Mame-Mor-M/Mame-Mor-Site/releases/download/PortfolioVids/Pulsefex.mp4", tech: [PiFileC, SiStmicroelectronics] },
+    
   ]
 
   const project_thumbnails = [
-    { id: "Post-Guardian", content: `${process.env.PUBLIC_URL}/Thumbnails/PostGuardian.jpg`, name: "Post Guardian", desc: "A Chrome extension which overlays social media platforms and highlights words/phrases which users are suggested to not post. Post Guardian also gives an analysis on uploaded videos to provide feedback on timestamps that may be inappropriate to post", video: "https://github.com/Mame-Mor-M/Mame-Mor-Site/releases/download/PortfolioVids/PostGuardian.mp4", tech: [SiJavascript]},
-    { id: "Pulsefex", content: `${process.env.PUBLIC_URL}/Thumbnails/Pulsefex.jpg`, name: "Pulsefex", desc: "An embedded systems project that captures and displays real-time heart rate and SpO2 levels. The system is built on the STM32WB55RG MCU and interfaces with the MAX30102 pulse oximeter and TMP102 temperature sensor, with real-time data output to an SSD1306 OLED screen.", video: "https://github.com/Mame-Mor-M/Mame-Mor-Site/releases/download/PortfolioVids/Pulsefex.mp4", tech: [PiFileC, SiStmicroelectronics] },
+    { id: "", content: `${process.env.PUBLIC_URL}/Thumbnails/MbongSite.png`, name: "Artist Portfolio Website", link: "https://mbongmbong.com/", video: "https://github.com/Mame-Mor-M/Mbong-Art-Portfolio/releases/download/Animation/Flux_Intro.mp4", tech: [FaFigma, FaReact] }
   ]
-  
-  const web_thumbnails = [
-    {
-      content: `${process.env.PUBLIC_URL}/Thumbnails/MbongSite.png`, name: "Artist Portfolio Website", link: "https://mbongmbong.com/", video: "https://github.com/Mame-Mor-M/Mbong-Art-Portfolio/releases/download/Animation/Flux_Intro.mp4", tech: [FaFigma, FaReact] }
-  ]
+ 
 
   return (
     <div className="Home">
@@ -117,95 +115,6 @@ function Home() {
           <SiFirebase title="Firebase" />
         </div>
       </div>
-
-
-      
-
-
-      <div className="Projects">
-        <header className="Section-Header" id="Projects">
-          Other Projects
-          <p className='Section-Desc'>Non-game projects</p>
-        </header>
-        <ResponsiveMasonry columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 3, 2000: 4, 2500: 5, 3000: 7, 3500: 10}}>
-          <Masonry columnsCount={3} gutter="16px">
-            {project_thumbnails.map((image, i) => (
-              <Link key={image.id} to={`/projects/${image.id}`}>
-              <div
-                key={i}
-                className="Projects-item"
-                onMouseEnter={e => {
-                  const video = e.currentTarget.querySelector("video");
-
-                  video && video.play();
-                }}
-                onMouseLeave={e => {
-                  const video = e.currentTarget.querySelector("video");
-                  if (video) {
-                    video.pause();
-                    video.currentTime = 0;
-                  }
-                }}
-              >
-                <div className="Media">
-                  <img src={image.content} alt={image.name} />
-                  
-                  <video
-                    src={image.video}
-                    muted
-                    loop
-                    playsInline
-                    preload="metadata"
-                  />
-                    <div className="TechStack">
-                      {image.tech?.map((Icon, i) => (
-                        <Icon className="TechStack-Icon " key={i} />
-                      ))}
-                    </div>
-                </div>
-                <div className="Overlay">
-                  <h3>{image.name}</h3>
-                  <p>{image.desc}</p>
-                </div>
-              </div>
-              </Link>))}
-            
-          </Masonry>
-        </ResponsiveMasonry>
-      </div>
-
-      <div className="Projects">
-        <header className="Section-Header" id="WebDesign">
-          Design Projects
-        </header>
-        <ResponsiveMasonry columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 3, 2000: 4, 2500: 5, 3000: 7, 3500: 10 }}>
-          <Masonry columnsCount={3} gutter="16px">
-            {web_thumbnails.map((image, i) => (
-              <a href={image.link} target="_blank" rel="noreferrer">
-              <div 
-                  key={i}
-                  className="Design-item"
-                >
-                  <div className="Media">
-                    <img src={image.content} alt={image.name} />
-                    <div className="TechStack">
-                      {image.tech?.map((Icon, i) => (
-                        <Icon className="TechStack-Icon " key={i} />
-                      ))}
-                    </div>
-                  </div>
-
-                  <div className="Overlay">
-                    <h3>{image.name}</h3>
-                  </div>
-                </div></a>))}
-
-          </Masonry>
-        </ResponsiveMasonry>
-      </div>
-
-
-
     </div>
   );
 }

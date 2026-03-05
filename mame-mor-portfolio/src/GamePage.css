@@ -64,18 +64,16 @@
 }
 
 .System-Content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
     gap: 1rem;
     margin-bottom: -6rem;
 }
 
 .System-Content img {
     width: 100%;
+    margin-bottom: 7rem;
 }
 
 .System-Text {
-    border: 3px solid black;
     font-family: "Jersey 25", sans-serif;
     padding: 1rem;
     white-space: pre-wrap;

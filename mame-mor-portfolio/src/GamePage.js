@@ -36,7 +36,6 @@ const GamePage = () => {
                     <section className="System">
                         {game.systemName?.map((sys, i) => (
                                 <div>
-                                    <h2 className='System-Header' >{sys}</h2>
                                     <div className="System-Content">
                                         <div className="System-Text">
                                             <p>
