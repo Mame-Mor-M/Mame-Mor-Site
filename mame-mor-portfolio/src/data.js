@@ -15,7 +15,7 @@
       systemImage: [],
       systemVideo: ["", ""],
       systemName: [],
-      systemDesc: ["/~Shared Script~/"]
+      systemDesc: [""]
     },
     {
       id: "Upperdut",
