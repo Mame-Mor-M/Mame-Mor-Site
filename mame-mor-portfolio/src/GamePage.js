@@ -16,43 +16,57 @@ const GamePage = () => {
         <div><Navbar />
             <div className="Game-Page">
                 <div className="Page-Content">
-                    {/* TITLE / DESCRIPTION */}
-                    <section className="Game-Info">
-                        <h1>{game.name}</h1>
-                        <h2>{game.role}</h2>
-                        <h2>Engine & Software: {game.engine}</h2>
-                        <h2>Team Size: {game.team}</h2>
-                        <h2>Game Page: <a target="_blank" href={`${game.page}`}>{game.page}</a></h2>
-                        
-                    </section>
-                    {/* HERO MEDIA */}
-                    <section className="Hero-Media">
-                        <video controls muted src={game.video} alt={game.name} />
-                        <p>{game.desc}</p>
+                    <section className="HeroGame">
+                        <div className="HeroGame-Left">
+                            <h1>{game.name}</h1>
+
+                            <div className="Game-Meta">
+                                <span>{game.role}</span>
+                                <span>{game.engine}</span>
+                                <span>Team Size: {game.team}</span>
+                            </div>
+
+                            <a className="Game-Link" target="_blank" href={game.page}>
+                                View Game Page
+                            </a>
+
+                            <p className="Game-Desc">{game.desc}</p>
+                        </div>
+
+                        <div className="HeroGame-Right">
+                            <video controls src={game.video}></video>
+                        </div>
                     </section>
 
 
-                    {/* SYSTEM SECTION */}
                     <section className="System">
+                        <h1 className="Section-Header">SYSTEMS</h1>
+
                         {game.systemName?.map((sys, i) => (
-                                <div>
-                                    <div className="System-Content">
-                                        <div className="System-Text">
-                                            <p>
-                                                {renderDescription(game.systemDesc[i])}
-                                                <br />
-                                                <br />
-                                                <a target="_blank" rel="noreferrer" href={`${game?.systemLink[i]}`}>{game?.systemName[i]} Script on GitHub</a>
-                                            </p>
-                                        </div>
-                                        {game?.systemImage[i] != "" ? <img src={game?.systemImage[i]} style={{ maxWidth: "700px" }} /> : <video src={game?.systemVideo[i]} style={{ maxWidth: "700px" }} loop autoPlay></video>}
-                                        <video src={game?.systemVideo[i]} loop autoPlay></video>
-                                    </div>
+
+                            <div className="System-Card" key={i}>
+
+                                <div className="System-Media">
+                                    {game?.systemImage[i]
+                                        ? <img src={game.systemImage[i]} />
+                                        : <video src={game.systemVideo[i]} autoPlay loop muted />
+                                    }
                                 </div>
 
+                                <div className="System-Text">
+                                    <h3>{sys}</h3>
+
+                                    {renderDescription(game.systemDesc[i])}
+
+                                    {game?.systemLink[i] &&
+                                        <a target="_blank" rel="noreferrer" href={game.systemLink[i]}>
+                                            View Script on GitHub
+                                        </a>}
+                                </div>
+
+                            </div>
+
                         ))}
-
-
 
                     </section>
                     <section className="Gallery">
@@ -106,7 +120,7 @@ const Navbar = () => {
     return (
         <nav className={`Navbar ${visible ? 'visible' : 'hidden'}`}>
             <Link style={{ color: "transparent" }} to={`/`}>
-                <div className="Navbar-Center" onClick={() => scrollToSection('Hero')}>
+                <div className="Navbar-Center" onClick={() => scrollToSection('HeroGame')}>
                     <h1>M.</h1>
                 </div></Link>
 
