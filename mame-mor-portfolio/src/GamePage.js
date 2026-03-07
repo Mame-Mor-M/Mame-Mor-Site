@@ -24,11 +24,15 @@ const GamePage = () => {
                                 <span>{game.role}</span>
                                 <span>{game.engine}</span>
                                 <span>Team Size: {game.team}</span>
+                                <span>{game.devTime}</span>
+                                <span>{game.type}</span>
                             </div>
+                            {game.page !== "" ?
+                                <a className="Game-Link" target="_blank" rel="noopener noreferrer" href={game.page}>
+                                    {game.type === "Game" ? "Play the Game" : "Check out the repository"}
+                                </a>
+                                : null}
 
-                            <a className="Game-Link" target="_blank" href={game.page}>
-                                View Game Page
-                            </a>
 
                             <p className="Game-Desc">{game.desc}</p>
                         </div>
