@@ -37,9 +37,10 @@ function Home() {
         <video src={'https://github.com/Mame-Mor-M/Mame-Mor-Site/releases/download/PortfolioVids/GameReel.mp4'} muted autoPlay loop playsInline preload='auto' controls={false}></video>
       </div>
 
-      <div className="Projects" id="Games">
+      <div className="Projects" id="Projects">
         <header className="Section-Header" >
-          My Games
+          <div className="Section-Divider"></div>
+          My Projects
         </header>
         <ResponsiveMasonry columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 3, 2000: 4, 2500: 5, 3000: 7, 3500: 10}}>
           <Masonry columnsCount={3} gutter="16px">
@@ -94,25 +95,97 @@ function Home() {
         <h2 className="Stack-Title">Skills</h2>
 
         <div className="Stack-Grid">
-          <FaUnity title="Unity" />
-          <SiBlender title="Blender" />
-          <SiGodotengine title="Godot" />
-          <FaPython title="Python" />
-          <FaJava title="Java" />
-          <SiJavascript title="JavaScript" />
-          <FaReact title="React" />
-          <PiFileCpp title="C++" />
-          <SiC title="C" />
-          <SiFlutter title="Flutter" />
-          <SiAndroidstudio title="Android Studio" />
-          <FaFigma title="Figma" />
-          <SiMysql title="MySQL" />
-          <PiFileSql title="SQL" />
-          <SiFmod title="FMOD" />
-          <PiFileC title="C" />
-          <PiFileCSharp title="C#" />
-          <SiMongodb title="MongoDB" />
-          <SiFirebase title="Firebase" />
+
+          <div className="Stack-Item">
+            <FaUnity />
+            <span>Unity</span>
+          </div>
+
+          <div className="Stack-Item">
+            <SiBlender />
+            <span>Blender</span>
+          </div>
+
+          <div className="Stack-Item">
+            <SiGodotengine />
+            <span>Godot</span>
+          </div>
+
+          <div className="Stack-Item">
+            <FaPython />
+            <span>Python</span>
+          </div>
+
+          <div className="Stack-Item">
+            <FaJava />
+            <span>Java</span>
+          </div>
+
+          <div className="Stack-Item">
+            <SiJavascript />
+            <span>JavaScript</span>
+          </div>
+
+          <div className="Stack-Item">
+            <FaReact />
+            <span>React</span>
+          </div>
+
+          <div className="Stack-Item">
+            <PiFileCpp />
+            <span>C++</span>
+          </div>
+
+          <div className="Stack-Item">
+            <SiC />
+            <span>C</span>
+          </div>
+
+          <div className="Stack-Item">
+            <PiFileCSharp />
+            <span>C#</span>
+          </div>
+
+          <div className="Stack-Item">
+            <SiFlutter />
+            <span>Flutter</span>
+          </div>
+
+          <div className="Stack-Item">
+            <SiAndroidstudio />
+            <span>Android Studio</span>
+          </div>
+
+          <div className="Stack-Item">
+            <FaFigma />
+            <span>Figma</span>
+          </div>
+
+          <div className="Stack-Item">
+            <SiMysql />
+            <span>MySQL</span>
+          </div>
+
+          <div className="Stack-Item">
+            <PiFileSql />
+            <span>SQL</span>
+          </div>
+
+          <div className="Stack-Item">
+            <SiMongodb />
+            <span>MongoDB</span>
+          </div>
+
+          <div className="Stack-Item">
+            <SiFirebase />
+            <span>Firebase</span>
+          </div>
+
+          <div className="Stack-Item">
+            <SiFmod />
+            <span>FMOD</span>
+          </div>
+
         </div>
       </div>
     </div>
@@ -158,8 +231,8 @@ const Navbar = () => {
       </div>
 
       <div className="Navbar-Right">
-        <button onClick={() => scrollToSection('Games')}>Games</button>
-        <button onClick={() => scrollToSection('Projects')}>Other Projects</button>
+        <button onClick={() => scrollToSection('Projects')}>My Projects</button>
+        {/*<button onClick={() => scrollToSection('Design')}>Design Work</button>*/}
         <Link className="nav-btn" to="/blog">Blog</Link>
         
         <a style={{}} href="https://github.com/Mame-Mor-M" target="_blank" rel="noopener noreferrer">
