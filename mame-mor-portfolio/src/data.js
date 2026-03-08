@@ -14,10 +14,10 @@
       video: "https://github.com/Mame-Mor-M/Mame-Mor-Site/releases/download/PortfolioVids/Touche-Tempo.mp4",
       gallery: [`/Images/TempoIntro.png`, `/Images/TempoSwan.png`, `/Images/TempoWin.png`, `/Images/TempoLose.png`, `/Images/TempoParry.png`, `/Images/TempoDifficulty.png` ],
       systemLink: [],
-      systemImage: [],
+      systemImage: ["/images/TempoFMOD.png", "/images/TempoEnemy.png"],
       systemVideo: ["", ""],
-      systemName: [],
-      systemDesc: [""]
+      systemName: ["Enemy Stance Mapping via FMOD Event Callbacks", "Beatmap Creation"],
+      systemDesc: ["/~Creating Beat Events~/Initially we used FMOD destination markers to create windows where the enemy would strike and mark which attacks they would perform. While this worked, there was some audio desync and the core aspect of beatmap creation was tedious. We switched over to a dictionary system as a solution. I created an object for individual beat events and mapped these to a dictionary holding their key; which attack the enemy would perform (enemy stance); and how long the enemy would hold that attack for (beat interval length). /~Using FMOD Event Callbacks~/On every beat the enemy stance and beat interval is retrieved from the beatmap dictionary. A public method within the enemy script is called using these stance and interval values as parameters to perform the corresponding attack. To make sure attacks or not overwritten and performed at the correct time, the next available beat is kept track of. Because beats reset after every bar, an index value is necessary and incremented after every beat event to perform the right attacks in sync with the FMOD music." , "/~Making the Beatmap~/With beat events being assigned to a dictionary, this became as simple as selecting an enemy attack using a state value, and assigning a beat interval to determine attack windows."]
     },
     {
       id: "Upperdut",
