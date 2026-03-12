@@ -126,3 +126,22 @@
     text-align: left;
     font-size: 30px;
 }
+@media (max-width: 768px) {
+    .HeroGame {
+        grid-template-columns: 1fr;
+    }
+
+    .System-Card {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .System-Card:nth-child(even) {
+        grid-template-columns: 1fr;
+    }
+
+    .HeroGame video {
+        margin-top: 0;
+    }
+
+}

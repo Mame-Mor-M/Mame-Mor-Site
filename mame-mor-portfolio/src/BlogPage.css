@@ -58,3 +58,18 @@
     font-size: larger;
     color: white;
 }
+@media (max-width: 768px) {
+    .BlogMediaRow {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .MediaWrapper {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+
+    .BlogMedia {
+        height: auto;
+    }
+}
