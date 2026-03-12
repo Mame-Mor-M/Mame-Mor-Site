@@ -469,7 +469,7 @@
     .Navbar {
         flex-direction: column;
         height: auto;
-        padding: 0.5rem;
+        padding: 0.0rem;
     }
 
     .Projects-Grid {
