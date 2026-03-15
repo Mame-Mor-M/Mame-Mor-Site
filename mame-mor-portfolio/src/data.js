@@ -69,7 +69,7 @@
       team: "30+",
       type: "Game",
       devTime: "4 Months",
-      page: "https://nova-so1.itch.io/bus-rush",
+      page: "https://gdyu.itch.io/citizen-jane",
       desc: "Citizen Jane is a detective mystery noir set in a big metropolitan city. Play as private investigator Jane, and solve a high profile murder. Traverse through comic panels and obtain clues, and combine them to solve the mystery. \n\n Building the player movement and inventory systems were my responsibilities. Movement was initially more complex with sprinting, crouching, climbing ladders, and perspective switching being present, but for design reasons and time constraints, simple top-down and side-to-side movement was what we decided to keep. \n\nThe video above showcases a level I implemented. Dialogue, movement, and inventory systems can be seen in action.\n\nThank you to all team members of the Game Devs @ York University club for an amazing development experience!", 
       video: "https://github.com/Mame-Mor-M/Mame-Mor-Site/releases/download/PortfolioVids/CitizenJane.mp4",
       gallery: [`/Images/citizenjanedialogue.jpg`, `/Images/citizenjaneinquire.jpg`, `/Images/citizenjaneinventory.jpg`, `/Images/citizenjanemenu.jpg`, `/Images/citizenjaneposter.png`],
