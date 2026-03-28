@@ -1,6 +1,16 @@
 const blogs = [
 
     {
+        title: 'Touché Tempo - Alpha Build 3',
+        date: '03/28/2026',
+        summary: "After a month and 2 playtests Touché Tempo has grown more into the game we intially planned. We were able to add feint mechanics, dodge regeneration, outlines, custom difficulty settings such as enabling and disabling key icons, accessibility settings, a new level, and so much more!",
+        media: [
+            { type: 'video', src: 'https://github.com/Mame-Mor-M/Mame-Mor-Site/releases/download/PortfolioVids/Settings.mp4' },
+            { type: 'video', src: 'https://github.com/Mame-Mor-M/Mame-Mor-Site/releases/download/PortfolioVids/Vs-Prince.mp4' }
+        ]
+    },
+
+    {
         title: 'Touché Tempo - Early Alpha Build',
         date: '02/19/2026',
         summary: "Over the last month, I alongside a team of 5 other students began working on a rhythm game called Touché Tempo. After a month of development much of the core gameplay mechanics are established. Above you can see the current state of the game with two playable levels, an enemy attack feint system, synchronized beat events (to the music), health, win + lose conditions, and visual feedback elements. Right now we are playing around with how forgiving the game should be, a wrong input is currently a guaranteed loss in 'health' (dodges) which may be too challenging on the player.",
