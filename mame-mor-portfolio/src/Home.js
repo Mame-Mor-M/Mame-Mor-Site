@@ -24,10 +24,7 @@ function Home() {
     
   ]
 
-  const project_thumbnails = [
-    { id: "", content: `${process.env.PUBLIC_URL}/Thumbnails/MbongSite.png`, name: "Artist Portfolio Website", link: "https://mbongmbong.com/", video: "https://github.com/Mame-Mor-M/Mbong-Art-Portfolio/releases/download/Animation/Flux_Intro.mp4", tech: [FaFigma, FaReact] }
-  ]
- 
+
 
   return (
     <div className="Home">
