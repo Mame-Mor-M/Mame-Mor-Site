@@ -1,8 +1,19 @@
 const blogs = [
 
+
+    {
+        title: 'Flipped Out - From Firebase to Java',
+        date: '03/28/2026',
+        summary: "Today I decided to go back to my first completed mobile project Flipped Out and rework the backend, converting it from a Firebase centric one to a Java backend. I've worked with Java for backend services before but on significantly smaller scale applications so this will be a fun learning process",
+        media: [
+            { },
+            {}
+        ]
+    },
+
     {
         title: 'Touché Tempo - Alpha Build 3',
-        date: '03/28/2026',
+        date: '03/27/2026',
         summary: "After a month and 2 playtests Touché Tempo has grown more into the game we intially planned. We were able to add feint mechanics, dodge regeneration, outlines, custom difficulty settings such as enabling and disabling key icons, accessibility settings, a new level, and so much more!",
         media: [
             { type: 'video', src: 'https://github.com/Mame-Mor-M/Mame-Mor-Site/releases/download/PortfolioVids/Settings.mp4' },
