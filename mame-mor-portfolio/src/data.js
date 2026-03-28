@@ -8,7 +8,7 @@
       engine: "Unity, C#", 
       team: "6",
       type: "Game",
-      devTime: "In Development - 1 & 1/2 Months",
+      devTime: "In Development - 2 Months",
       page: "",
       desc: "Touché Tempo is a Rhythm game with a classic arcade fighter twist. The game involves Fencing through music, utilize three stances to best your opponents in The Devil's Tournament and earn his prize. Explore the HUB between matches to converse with your opponents and maintain or deter relationships. Touche Tempo is project that came to life in my last semester of undergrad for a collaborative game development course where I have been responsible for some gameplay programming. Features I worked on include the beatmap implementation, the enemy parry system, difficulty, and currently in the works, the relationship system. The game is 2 Months into development and we're excited to show off what's next!",
       video: "https://github.com/Mame-Mor-M/Mame-Mor-Site/releases/download/PortfolioVids/Touche-Tempo.mp4",
