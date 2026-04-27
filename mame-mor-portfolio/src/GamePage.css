@@ -58,6 +58,13 @@
     margin-top: 5rem;
 }
 
+.HeroGame-Right img {
+    width: 100%;
+    margin-top: 5rem;
+    max-width: 100rem;
+    border-radius: 3px;
+}
+
 .System {
     margin-top: 4rem;
 }
@@ -143,5 +150,6 @@
     .HeroGame video {
         margin-top: 0;
     }
+    
 
 }

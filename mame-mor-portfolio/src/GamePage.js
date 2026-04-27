@@ -38,7 +38,7 @@ const GamePage = () => {
                         </div>
 
                         <div className="HeroGame-Right">
-                            <video controls src={game.video}></video>
+                            {game.video ? <video controls src={game.video}></video> : <img src={game.content}></img>}
                         </div>
                     </section>
 
