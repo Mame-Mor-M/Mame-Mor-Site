@@ -1,5 +1,5 @@
 import { FaGithub,FaItchIo, FaLinkedin, FaEnvelope, FaUnity, FaJava, FaReact, FaPython , FaFigma,} from 'react-icons/fa';
-import { SiBlender, SiGodotengine, SiJavascript, SiMysql, SiC, SiFlutter, SiAndroidstudio, SiFmod, SiFirebase, SiMongodb, SiStmicroelectronics  } from "react-icons/si";
+import { SiBlender, SiGodotengine, SiJavascript, SiMysql, SiC, SiFlutter, SiAndroidstudio, SiFmod, SiFirebase, SiMongodb, SiStmicroelectronics, SiSupabase  } from "react-icons/si";
 import { PiFileCpp, PiFileSql, PiFileC, PiFileCSharp} from "react-icons/pi"
 import { useState, useEffect, useRef } from 'react';
 import Masonry, { ResponsiveMasonry } from 'react-responsive-masonry';
@@ -19,6 +19,7 @@ function Home() {
     {id: "Endzone", content: `${process.env.PUBLIC_URL}/Thumbnails/Endzone.png`, name: "Endzone", desc: "An arcade style sports survival game. Avoid opposing defenders in each region of the football field and reach the opponents end zone to win the game.", video: "https://github.com/Mame-Mor-M/Mame-Mor-Site/releases/download/PortfolioVids/EndzoneGameplay.mp4", tech: [] },
     {id: "Flipped-Out", content: `${process.env.PUBLIC_URL}/Thumbnails/FlippedOut.jpg`, name: "Flipped Out", desc: "A fast-paced mobile memory matching game with both solo and competitive play, player trophies, and a global leaderboard", video: "https://github.com/Mame-Mor-M/Mame-Mor-Site/releases/download/PortfolioVids/FlippedShort.mp4", tech: [SiFlutter, FaFigma, SiFirebase] },
     {id: "Othello", content: `${process.env.PUBLIC_URL}/Thumbnails/Othello.png`, name: "Othello", desc: "A digital recreation of the board game Othello built entirely in Java using JavaFX for the GUI.  this application allows for Human vs. Human, Human vs. CPU, and CPU vs. CPU gameplay.", video: "https://github.com/Mame-Mor-M/Mame-Mor-Site/releases/download/PortfolioVids/OthelloPlaythrough.mp4", tech: [FaJava]},
+    { id: "TomaGames", content: `${process.env.PUBLIC_URL}/Thumbnails/TomaThumbnail.png`, name: "TomaGames Store", desc: "TomaGames Store is an E-commerce site for purchasing video games. Search an endless catalog with real-time item updates and a personalized user experience. ", video: "", tech: [FaPython, FaReact, SiSupabase] },
     { id: "Post-Guardian", content: `${process.env.PUBLIC_URL}/Thumbnails/PostGuardian.jpg`, name: "Post Guardian", desc: "A Chrome extension which overlays social media platforms and highlights words/phrases which users are suggested to not post. Post Guardian also gives an analysis on uploaded videos to provide feedback on timestamps that may be inappropriate to post", video: "https://github.com/Mame-Mor-M/Mame-Mor-Site/releases/download/PortfolioVids/PostGuardian.mp4", tech: [SiJavascript] },
     { id: "Pulsefex", content: `${process.env.PUBLIC_URL}/Thumbnails/Pulsefex.jpg`, name: "Pulsefex", desc: "An embedded systems project that captures and displays real-time heart rate and SpO2 levels. The system is built on the STM32WB55RG MCU and interfaces with the MAX30102 pulse oximeter and TMP102 temperature sensor, with real-time data output to an SSD1306 OLED screen.", video: "https://github.com/Mame-Mor-M/Mame-Mor-Site/releases/download/PortfolioVids/Pulsefex.mp4", tech: [PiFileC, SiStmicroelectronics] },
     
@@ -88,99 +89,39 @@ function Home() {
         </ResponsiveMasonry>
       </div>
 
-      <div className="Stack-Section">
-        <h2 className="Stack-Title">Skills</h2>
+      <div className="Profile-Intro">
+        <img
+          src="/other/LinkedinPFP.png"
+          alt="Look, it's me"
+          className="Profile-PFP"
+        />
 
-        <div className="Stack-Grid">
+        <h2 className="Stack-Title">Mame Mor Mbacke</h2>
 
-          <div className="Stack-Item">
-            <FaUnity />
-            <span>Unity</span>
+        <p className="Profile-Text">
+          My Favorite Things: Football, Video Games, & Star Wars
+        </p>
+
+        <p className="Profile-Subtext">
+          I like to make stuff, especially games. As a recent computer science grad I've been picking up some new engines (Learning UE5) and improving my gameplay programming skills with a few new projects. Check out some of my work above and learn more about what I'm working on right now in my blog.
+        </p>
+      </div>
+
+      <div className="About-Carousel">
+        <h3 className="Carousel-Title">A little more about me</h3>
+
+        <div className="Carousel-Track">
+
+          <div className="Carousel-Item">
+            <img src="/other/LevelUpTrophy.jpg" alt="Achievement 1" />
           </div>
 
-          <div className="Stack-Item">
-            <SiBlender />
-            <span>Blender</span>
+          <div className="Carousel-Item">
+            <img src="/other/LevelUpTeam.jpg" alt="Achievement 2" />
           </div>
 
-          <div className="Stack-Item">
-            <SiGodotengine />
-            <span>Godot</span>
-          </div>
-
-          <div className="Stack-Item">
-            <FaPython />
-            <span>Python</span>
-          </div>
-
-          <div className="Stack-Item">
-            <FaJava />
-            <span>Java</span>
-          </div>
-
-          <div className="Stack-Item">
-            <SiJavascript />
-            <span>JavaScript</span>
-          </div>
-
-          <div className="Stack-Item">
-            <FaReact />
-            <span>React</span>
-          </div>
-
-          <div className="Stack-Item">
-            <PiFileCpp />
-            <span>C++</span>
-          </div>
-
-          <div className="Stack-Item">
-            <SiC />
-            <span>C</span>
-          </div>
-
-          <div className="Stack-Item">
-            <PiFileCSharp />
-            <span>C#</span>
-          </div>
-
-          <div className="Stack-Item">
-            <SiFlutter />
-            <span>Flutter</span>
-          </div>
-
-          <div className="Stack-Item">
-            <SiAndroidstudio />
-            <span>Android Studio</span>
-          </div>
-
-          <div className="Stack-Item">
-            <FaFigma />
-            <span>Figma</span>
-          </div>
-
-          <div className="Stack-Item">
-            <SiMysql />
-            <span>MySQL</span>
-          </div>
-
-          <div className="Stack-Item">
-            <PiFileSql />
-            <span>SQL</span>
-          </div>
-
-          <div className="Stack-Item">
-            <SiMongodb />
-            <span>MongoDB</span>
-          </div>
-
-          <div className="Stack-Item">
-            <SiFirebase />
-            <span>Firebase</span>
-          </div>
-
-          <div className="Stack-Item">
-            <SiFmod />
-            <span>FMOD</span>
+          <div className="Carousel-Item">
+            <img src="/other/PostGuardTeam.jpg" alt="Achievement 3" />
           </div>
 
         </div>
