@@ -108,7 +108,7 @@ function Home() {
       </div>
 
       <div className="About-Carousel">
-        <h3 className="Carousel-Title">A little more about me</h3>
+        <h3 className="Carousel-Title"></h3>
 
         <div className="Carousel-Track">
 

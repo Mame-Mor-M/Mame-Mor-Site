@@ -624,6 +624,7 @@
     align-items: center;
     justify-content: center;
     margin-bottom: 4rem;
+    padding-top: 3rem;
     text-align: center;
 }
 
@@ -677,6 +678,7 @@
 .About-Carousel {
     margin-top: 5rem;
     width: 100%;
+    justify-self: center;
 }
 
 .Carousel-Title {
@@ -691,7 +693,7 @@
 .Carousel-Track {
     display: flex;
     gap: 1.5rem;
-
+    justify-self: center;
     overflow-x: auto;
     scroll-behavior: smooth;
 
