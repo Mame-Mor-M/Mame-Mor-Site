@@ -91,7 +91,7 @@ function Home() {
 
       <div className="Profile-Intro">
         <img
-          src="/other/LinkedinPFP.png"
+          src={`${process.env.PUBLIC_URL}/Other/LinkedinPFP.png`}
           alt="Look, it's me"
           className="Profile-PFP"
         />
@@ -113,15 +113,15 @@ function Home() {
         <div className="Carousel-Track">
 
           <div className="Carousel-Item">
-            <img src="/other/LevelUpTrophy.jpg" alt="Achievement 1" />
+            <img src={`${process.env.PUBLIC_URL}/Other/LevelUpTrophy.jpg`} alt="Achievement 1" />
           </div>
 
           <div className="Carousel-Item">
-            <img src="/other/LevelUpTeam.jpg" alt="Achievement 2" />
+            <img src={`${process.env.PUBLIC_URL}/Other/LevelUpTeam.jpg`} alt="Achievement 2" />
           </div>
 
           <div className="Carousel-Item">
-            <img src="/other/PostGuardTeam.jpg" alt="Achievement 3" />
+            <img src={`${process.env.PUBLIC_URL}/Other/PostGuardTeam.jpg`} alt="Achievement 3" />
           </div>
 
         </div>
