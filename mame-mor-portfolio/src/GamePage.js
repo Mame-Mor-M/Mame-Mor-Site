@@ -29,7 +29,7 @@ const GamePage = () => {
                             </div>
                             {game.page !== "" ?
                                 <a className="Game-Link" target="_blank" rel="noopener noreferrer" href={game.page}>
-                                    {game.type === "Game" ? "Play the Game" : "Check out the repository"}
+                                    {game.type === "Game" ? "Play the Game" : "Check it out"}
                                 </a>
                                 : null}
 
