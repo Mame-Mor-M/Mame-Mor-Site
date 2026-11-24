@@ -52,7 +52,7 @@ body {
 .Hero {
     text-align: center;
     background-color: #000000;
-    height: 100vh;
+    height: 140vh;
     width: 100%;
     padding-top: 7rem;
     justify-self: center;
@@ -300,7 +300,8 @@ body {
 }
 
 .TechStack-Icon {
-    min-width: 2rem;
+    min-width: 4rem;
+    min-height: 3rem;
     color: rgb(255, 255, 255);
     background: rgba(0, 0, 0, 0.603);
     padding: 4px;
@@ -334,7 +335,7 @@ body {
 
 .Overlay h3 {
     margin: 0 0 0.25rem;
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     text-align: left;
 }
 
