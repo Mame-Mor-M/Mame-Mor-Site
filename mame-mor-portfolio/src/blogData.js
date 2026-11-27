@@ -1,10 +1,18 @@
 const blogs = [
-
+    {
+        title: 'Fear Cave - An Unreal Engine 5 Game',
+        date: '10/03/2026',
+        summary: "Throughout the year I've been on and off with UE5, learning the basics of blueprints and C++ integration, and how I could translate my game programming knowledge to this engine. Up until this point, I'd made a lot of small features but never a full project, and that's why I decided to start up on Fear Cave. A cave exploration game where players have to map out unexplored caves and manage their stress by constructing light sources. The game is currently under development and I can't wait to provide an update soon.",
+        media: [
+            {},
+            {}
+        ]
+    },
 
     {
-        title: 'Flipped Out - From Firebase to Java',
-        date: '03/28/2026',
-        summary: "Today I decided to go back to my first completed mobile project Flipped Out and rework the backend, converting it from a Firebase centric one to a Java backend. I've worked with Java for backend services before but on significantly smaller scale applications so this will be a fun learning process",
+        title: 'Endzone Remake - Turning it into an RPG',
+        date: '07/27/2026',
+        summary: "It's been a while since I last touched Endzone. Last time I tackled it, I converted the project from a GB Studio game to a C++/SFML project. I decided, not only did I want to do a 1 to 1 conversion, but I also wanted to improve the game, so today I came up with an encounter system inspired by classic Pokemon games.",
         media: [
             { },
             {}
