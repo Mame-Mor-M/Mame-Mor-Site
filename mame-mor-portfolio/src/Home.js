@@ -181,7 +181,7 @@ const Navbar = () => {
         <a style={{}} href="https://www.linkedin.com/in/mame-mor-mbacke/" target="_blank" rel="noopener noreferrer">
           <FaLinkedin />
         </a>
-        <a style={{}} href="https://itch.io/profile/MamemorM" target="_blank" rel="noopener noreferrer">
+        <a style={{}} href="https://itch.io/profile/mamemorm" target="_blank" rel="noopener noreferrer">
           <FaItchIo />
         </a>
         <button onClick={() => window.open(
